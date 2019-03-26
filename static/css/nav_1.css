@@ -1,0 +1,507 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  font-family:MicrosoftYaHei;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #303445;
+}
+/* html, body{
+  background:#fff;
+  color: #303445;
+} */
+.nav-matrix{
+  background: #fff;
+  height: 42px;
+  width: 100%;
+  border-bottom: 1px solid #D5D5DE;
+  
+}
+.nav-matrix-con{
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 42px;
+}
+.nav-matrix-con a{
+  color: #9FA5BB;
+  font-size: 12px;
+  padding: 0 14px;
+  border-right: 1px solid #9FA5BB;
+}
+.nav-matrix-con a:first-child{
+  padding-left: 0;
+}
+.nav-matrix-con a:last-child{
+  border-right:none;
+}
+.nav-matrix-con a:hover{
+  color: #464545;
+}
+.navigator-area {
+  height: 100px;
+  font-size: 14px;
+  /* line-height: 58px; */
+  background: #fff;
+ 
+}
+.navigator-wrap {
+ /* line-height: 58px; */
+  width: 100%;
+  /* height: 58px; */
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  z-index: 99999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+}
+.navigator-area .navigator-logo,
+.navigator-area .navigator-login-register {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin-right: 65px;
+}
+.navigator-shoplogo{
+  background-image: url("../images/college-logo_1.png");
+  display: inline-block;
+  width: 128px;
+  height: 30px;
+  vertical-align: middle;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.navigator-area .navigator-login-register{
+  position: absolute;
+  right: 0;
+  margin-right: 0;
+}
+.navigator-area .navigator-logo img {
+  display: inline-block;
+  height: 41px;
+  vertical-align: middle;
+}
+.navigator-area .navigator-logo h1 {
+  display: none;
+}
+.navigator-area .navigator-menus {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-left: 10px;
+}
+.navigator-menus > span{
+  transition: all 3s;
+}
+.navigator-area .menus-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.navigator-area .menu-item {
+  display: block;
+  margin: 0 40px 0 20px;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+ /* position: relative!important;*/
+}
+.navigator-area .menu-item.active,
+.navigator-area .menu-item.hover {
+  color: #3091f2;
+}
+.navigator-area .menu-same.active a,
+.navigator-area .menu-same.hover a {
+  color: #3091f2;
+}
+.navigator-area .search-app {
+  padding-left: 20px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  width: 180px;
+  height: 30px;
+  vertical-align: middle;
+}
+.navigator-area .search-input {
+  padding-left: 10px;
+  width: 139px;
+  height: 28px;
+  vertical-align: top;
+  outline: none;
+  border: 1px solid #D5D5DE;
+  border-right: none;
+}
+.navigator-area .search-btn {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  line-height: 28px;
+  vertical-align: top;
+  color: #3091f2;
+  border: 1px solid #3091f2;
+}
+.navigator-area .login-btn {
+  display: inline-block;
+  margin: 4px;
+  width: 55px;
+  border: 1px solid #3091f2;
+  line-height: 28px;
+  border-radius: 2px;
+  color: #3091f2;
+}
+.navigator-area .register-btn {
+  display: inline-block;
+  margin: 4px;
+  width: 55px;
+  background-color: #3091f2;
+  border: 1px solid #3091f2;
+  line-height: 28px;
+  border-radius: 2px;
+  color: #fff;
+}
+.navigator-area .register-btn:hover,
+.navigator-area .login-btn:hover {
+  background-color: #48a4ff;
+  color: #fff;
+}
+/* 登录注册 */
+.navigator{
+  position: relative;
+  width:1200px;
+  margin: 0 auto;
+  height: 58px;
+  line-height: 58px;
+}
+.nav-logo a {
+  color: #fff;
+  display: block;
+  position: relative;
+  height: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.nav-wrap .top-menu {
+  width: 71%;
+  float: left;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-family:"Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  text-align: center;
+}
+.menu-one{
+  position: relative;
+}
+.menu-one ul{
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 58px;
+  font-size: 14px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+          box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+#nav-center ul{
+  position: absolute;
+  left: -30px;
+  right: -30px;
+  z-index: 99999;
+}
+.menu-one .hoverActive {
+  background-color: #333538;
+  color: #ffffff;
+}
+.menu-one .menu-two .hoverActiveA{
+  color: #ffffff;
+  background-color: #3091f2;
+}
+.menu-one:hover, .menu-one.active {
+  background-color: #fff;
+  color: #ffffff;
+}
+.menu-one:hover ul{
+  display: block;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+          box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
+}
+.menu-one > a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #cfcfcf;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#menu-market{
+  position: relative;
+  overflow: visible!important;
+}
+#menu-market:hover .menu-list{
+  display: block;
+}
+#menu-market ul li:hover{
+  color: #3091f2;
+}
+#menu-market ul li a:hover{
+  color:#3091f2;
+}
+#menu-market ul{
+  display: none;
+  position: absolute;
+  left: -5px;
+  top: 58px;
+  width: 106%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  background: #fff;
+}
+#menu-market ul .menu-show{
+  width: 100%;
+  height: 46px;
+  line-height: 42px;
+  background-color: #fff;
+  padding: 0 5px;
+}
+#menu-market .menu-show{
+  font-size: 14px;
+}
+.check_login{
+  cursor: pointer;
+}
+#webapp_icon{
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  max-width: 40px;
+  z-index: 999;
+}
+li.menu-one .menu-two{
+  width: 170px;
+}
+div.nav-center li.menu-two{
+  width: 100%;
+  right: 0;
+}
+li.menu-one .menu-two:hover{
+  color: #ffffff;
+  background-color: #3091f2;
+}
+.menu-one .menu-two:focus > a{
+  background-color: #0582ff;
+  color: #fff;
+  width: 100%;
+}
+.menu-one .menu-two{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  color: #cfcfcf;
+  position: relative;
+}
+.menu-one .menu-two:hover{
+  background-color: #eee;
+}
+.menu-one .menu-two:hover > a {
+  color: #59607b;
+}
+.menu-one .menu-two > a{
+  display: inline-block;
+  height: 100%;
+  color: #303445;
+  width: 100%;
+  font-size: 12px;
+}
+.menu-two span{
+  position: absolute;
+  left: 27px;
+  top: 8px;
+  background-image: url("../images/menulogo_1.png");
+  display: inline-block;
+  height: 18px;
+  width: 20px;
+  background-size: auto 72px;
+}
+#logo1{
+  background-position:-33px -9px;
+}
+#logo2{
+  background-position:-65px -9px;
+}
+#logo3{
+  background-position:-93px -9px;
+}
+#logo4{
+  background-position:-123px -9px;
+}
+#logo5{
+  background-position:-156px -9px;
+}
+#logo6{
+  background-position:-182px -9px;
+}
+#logo7{
+  background-position:-213.5px -9px;
+}
+#logo8{
+  background-position:-600px -8px;
+}
+#logo9{
+  background-position:-238px -9px;
+  top: 5px;
+}
+#logo10{
+  background-position:-92px -9px;
+  top: 5px;
+}
+#logo11{
+  background-position:-265px -9px;
+  top: 5px;
+}
+.menu-two-logo1:hover #logo1{
+  background-position:-33px -39px;
+}
+.menu-two-logo2:hover #logo2{
+  background-position:-65px -39px;
+}
+.menu-two-logo3:hover #logo3{
+  background-position:-93px -39px;
+}
+.menu-two-logo4:hover #logo4{
+  background-position:-123px -39px;
+}
+.menu-two-logo5:hover #logo5{
+  background-position:-156px -39px;
+}
+.menu-two-logo6:hover #logo6{
+  background-position:-182px -39px;
+}
+.menu-two-logo7:hover #logo7{
+  background-position:-213.5px -39px;
+}
+.menu-two-logo8:hover #logo8{
+  background-position:-600px -39px;
+}
+.menu-two-logo9:hover #logo9{
+  background-position:-238px -39px;
+}
+.menu-two-logo10:hover #logo10{
+  background-position:-92px -39px;
+}
+.menu-two-logo11:hover #logo11{
+  background-position:-265px -39px;
+}
+.nav-wrap .nav-login{
+  width: 12%;
+  height: 100%;
+  float: right;
+  margin-right: 67px;
+}
+.nav-login .login-span-wrap {
+  text-align: center;
+}
+.nav-lglogin{
+  border: 1px solid #36b0e5;
+    margin-right: 8px;
+}
+.nav-lglogin:hover {
+  background-color: #36b0e5;
+}
+.nav-reg{
+  border: 1px solid #37bf61;
+}
+.nav-reg:hover{
+  background-color: #36b0e5;
+}
+.massage {
+  width: 30px;
+  display: inline-block;
+  float: right;
+}
+.massage a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.massage img {
+  width: 30px;
+  top: 12px;
+  position: relative;
+  margin-right: 15px;
+  margin-left: -103px;
+}
+.nav-center {
+  display: inline-block;
+  height: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+.nav-img {
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+  vertical-align: middle;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+#change-account-type {
+  font-size: 14px;
+  cursor: pointer;
+}
+#change-account-type label {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.menu-one > a.user-info{
+  color: #303445;
+  overflow: inherit;
+}
+.nickName {
+  display: inline-block;
+  width: 80px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 20px;
+  text-align: center;
+}
+.vip-level{
+  display: inline-block;
+}
+.nickNamelogo{
+  background-image: url("../images/menulogo_1.png");
+  display: inline-block;
+  height: 58px;
+  width: 28px;
+  background-size: auto 73px;
+  vertical-align: top;
+}
+.nav-vip-logo {
+  width: 20px;
+}
+/* 登录注册结束 */

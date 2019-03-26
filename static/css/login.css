@@ -1,0 +1,795 @@
+﻿html,body{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Microsoft Yahei",Helvetica, sans-serif;
+  overflow: auto;
+  background-color: #F1F4FF;
+}
+body.login{
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input{
+	outline: none;
+	color: #959595;
+	width: 314px;
+  height: 34px;
+}
+input[type="text"],input[type="password"]{text-indent: 8px;}
+.hide {
+	display: none;
+}
+nav .hide{
+	display: none;
+}
+.necessery {
+	color: red;
+	margin-left: 10px;
+}
+nav {
+	position: relative;
+	width: 64%;
+	height: 65px;
+	min-width: 853px;
+	margin: 0 auto;
+	background: url(../images/logo.png) no-repeat;
+	background-size: auto 40px;
+	background-position: 8px 14px; 
+}
+.login-nav{
+	display: block;
+  background-color: #fff;
+  height: 100%;
+  margin: 0;
+}
+nav > div {
+	display: inline-block;
+	line-height: 65px;
+	margin: -14px 135px;
+	font-weight: 600;
+}
+nav > div >span:nth-child(3) {
+	margin-right: 77px;
+}
+nav .vertical-line {
+	display: inline-block;
+	width: 1px;
+	height: 25px;
+	margin-top: 15px;
+	background-color: #cbcbcb;
+	vertical-align: top;
+}
+nav .title {
+	text-align: center;
+	line-height: 30px;
+	font-weight: 600;
+	margin: 0 10px;
+}
+nav > div .active {
+	color: #37b8ec;
+}
+.long-line {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #d5d5de;
+}
+.foot_line{
+	display: none;
+	width: 100%;
+	height: 1px;
+	background-color: #959595;
+  margin-top: 166px;
+}
+body.login .foot_line{
+  display: block;
+}
+.backgroundImg {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%
+}
+#register-detail .backgroundImg, #findPW-detail .backgroundImg {
+	left: 20%;
+}
+.input-login {
+	width: 1200px;
+	min-width: 853px;
+  min-height: 498px;
+	margin: 90px auto 0;
+  overflow: hidden;
+}
+.input-login div {
+    display: inline-block;
+    width: 281px;
+    vertical-align: top;
+    padding: 4px 0;
+}
+.cross-line {
+	display: inline-block;
+	height: 1px;
+	width: 63px;
+	margin: 9px 10px 0;
+	vertical-align: top;
+	background-color: #cbcbcb;
+}
+.getPicCode {
+	cursor: pointer;
+}
+.getPicCode:hover span{
+	text-decoration: underline;
+}
+.qrcode-title .cross-line {
+	margin: 12px 10px 0;
+}
+.login-form .qrcode-title .cross-line {
+	width: 58px;
+	margin: 9px 10px 0;
+}
+.qrcode-title {
+	font-size: 12px;
+	text-align: center;
+	font-weight: 600;
+	color: #9fa5bb;
+}
+#qrcode-login {
+	display: block;
+	width: 240px;
+	height: 240px;
+	margin: 35px auto 0;
+	border: 1px solid #cbcbcb;
+}
+#com-login-img {
+	display: none;
+	margin: 20px auto 0;
+	width: 300px;
+}
+.input-login .login-form{
+	float: right;
+	width: 240px;
+	padding: 28px 55px;
+	background: #fff;
+	margin-top: 72px;
+}
+.form-title {
+	text-align: center;
+}
+.form-title .to-register {
+	cursor: pointer;
+	font-weight: normal;
+	float: right;
+	text-decoration: underline;
+	color: #37b8ec;
+	font-size: 14px;
+	margin-top: 5px;
+}
+.login-form  input{
+	width: 278px;
+	height: 40px;
+    /* outline: none; */
+	border-radius: 2px;
+	border: 1px solid #cbcbcb;
+	text-indent: 10px;
+	vertical-align: middle;
+}
+.login-form  input:focus{
+	border: 1px solid #3091f2;
+}
+.login-form .pw-S-F {
+	color: #59607b;
+}
+.pw-S-F input:checked{
+    background-color: #3091f2;
+}
+.login-form .forget-PW {
+	  cursor: pointer;
+    color: #59607b;
+    text-decoration: underline;
+    font-size: 12px;
+    margin-top: -20px;
+    margin-left: 17px;
+}
+.login-form .qrcode-title {
+	font-weight: normal;
+}
+.submit-btn {
+	cursor: pointer;
+	margin: 20px 0 10px;
+	border-radius: 2px;
+	line-height: 29px;
+	text-align: center;
+	font-size: 16px;
+	background-color: #3091f2;
+	color: #fff;
+}
+ #to-login, #findPW-nav .title{
+	cursor: pointer;
+  background-color: #3091f2;
+  padding: 5px 12px;
+  color: #fff;
+  border-radius: 2px;
+  line-height: 58px;
+  font-size: 12px;
+}
+.img-qq {
+	margin-top: 15px;
+	text-align: center;
+}
+.img-qq a {
+	margin-right: 10px;
+}
+.img-qq img {
+	width: 44px;
+	margin: 0 19px;
+}
+/*注册部分*/
+#register-detail {
+	width: 800px;
+	margin: 0 auto;
+}
+#register-detail .reg-type {
+	width: 240px;
+	height: 32px;
+	margin: 35px auto;
+	border-radius: 30px;
+	color: #37b8ec;
+	background-color: #fff;
+	overflow: hidden;
+	border: 1px solid #37b8ec;
+}
+.get-reg-code, .get-complete-code {
+	cursor: pointer;
+	display: inline-block;
+  vertical-align: middle;
+  width: 120px;
+  margin-left: 10px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #dedede;
+  border-radius: 3px;
+}
+#register-detail .reg-type span {
+	cursor: pointer;
+	width: 120px;
+	display: inline-block;
+	text-align: center;
+	line-height: 32px;
+}
+#register-detail .reg-type .active {
+	color: #fff;
+	background-color: #37b8ec;
+}
+#person-reg {
+	margin-top: 60px;
+	padding: 0 240px;
+}
+#person-reg > p {
+	font-size: 18px;
+	margin: 30px 0;
+	color: #4c4c4c;
+	text-indent: 20px;
+}
+#person-reg .to-login {
+	cursor: pointer;
+	float: right;
+	margin-top: 5px;
+	font-size: 14px;
+	color: #37b8ec;
+	margin-right: 30px;
+}
+#scan-before {
+	margin: 50px auto 0;
+}
+#scan-before img {
+	display: block;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	border: 1px solid #cbcbcb;
+}
+#scan-after input{
+	width: 238px;
+  height: 28px;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  text-indent: 5px;
+}
+#scan-after .complete-title {
+	text-indent: 28px;
+	font-size: 16px;
+  font-weight: 600;
+  color: #424242;
+}
+#scan-after .submit-btn {
+	width: 240px;
+	margin-left: 25px;
+}
+/*企业注册*/
+#company-reg {
+	display: none;
+	padding: 0 242px;
+	margin-top: 60px;
+}
+#company-reg p {
+	font-size: 18px;
+	color: #4c4c4c;
+  text-indent: 20px;
+  font-weight: 600;
+}
+#company-reg .to-login {
+	cursor: pointer;
+	font-size: 14px;
+	float: right;
+	color: #37b8ec;
+	margin-top: 5px;
+	margin-right: 20px;
+	font-weight: normal;
+}
+#company-reg .input-info {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+#company-reg .input-info input{
+	width: 270px;
+	height: 28px;
+	border: 1px solid #cbcbcb;
+	border-radius: 3px;
+}
+#companyType {
+	width: 274px;
+	height: 32px;
+	color: #959595;
+	border: 1px solid #cbcbcb;
+  border-radius: 3px;
+}
+#provinceSelect, #citySelect, #areaSelect {
+	width: 89px;
+	height: 32px;
+	color: #959595;
+	border: 1px solid #cbcbcb;
+  border-radius: 3px;
+}
+#company-reg #exchangeCode {
+  width: 200px;
+}
+#voucherCode {
+	display: inline-block;
+	width: 60px;
+	height: 32px;
+	margin-left: 9px;
+	border-radius: 3px;
+	background-color: #10f30d;
+	vertical-align: top;
+	text-align: center;
+	color: #fff;
+	line-height: 32px;
+}
+#company-reg .inv-code {
+	width: 85px;
+	height: 28px;
+	margin-left: 20px;
+	text-indent: 0;
+	text-align: center;
+	border: 1px solid #cbcbcb;
+  border-radius: 3px;
+}
+#company-reg .submit-btn{
+	display: inline-block;
+  width: 182px;
+  height: 34px;
+  vertical-align: top;
+  margin-top: 0;
+  line-height: 34px;
+}
+/*tab切换*/
+.login_tab{
+	position: absolute;
+  top: 20%;
+  left: 18.5%;
+  display: none;
+  width: 59.5%;
+  background-color: #eaeaee;
+  border: none;
+}
+.login_tab span{
+  width: 33.334%;
+  height: 28px;
+  background-color: #3091f2;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  padding: 4px;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+.find-password span{
+	  display: inline-block;
+    height: 38px;
+    vertical-align: middle;
+    text-align: center;
+    color: #53535a;
+    font-size: 12px;
+    line-height: 38px;
+    width: 99px;
+}
+.login_phone>select{
+	  height: 40px;
+    width: 103px;
+    border: 1px solid #959595;
+    outline: none;
+    border-right: none;
+    vertical-align: middle;
+    color: #53535a;
+    background :url(../images/login_phone.png) no-repeat;
+    text-indent: 30px;
+    background-position: 8px 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.personage_register span{
+	display: inline-block;
+    height: 38px;
+    vertical-align: middle;
+    text-align: center;
+    color: #303445;
+    font-size: 12px;
+    line-height: 38px;
+    width: 66px;
+}
+.find-password.hide {
+  position: absolute;
+  top: 28%;
+  left: 18.5%;
+ /* border: 1px solid #eaeaea;*/
+  width: 59.4%;
+  height: 49%;
+  text-align: center;
+  z-index: 0;
+}
+/*找回密码*/
+#findPW-detail {
+	width: 800px;
+	margin: 0 auto;
+}
+#findPW-detail .find-password {
+	padding: 0 280px;
+  margin-top: 80px;
+}
+#findPW-detail .find-password p {
+	font-size: 18px;
+}
+#findPW-detail .to-login {
+	float: right;
+	font-size: 14px;
+	color: #3091f2;
+	margin-top: 5px;
+}
+#findPW-detail label {
+	display: block;
+}
+#findPW-detail .get-code {
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	height: 32px;
+	width: 115px;
+	background-color: #ffcb2f;
+	color: #fff;
+	text-align: center;
+  line-height: 32px;
+  margin-top: 1px;
+}
+#findPW-detail label .non {
+	background-color: #c6c6c6;
+}
+#findPW-detail label input {
+	width: 236px;
+	height: 28px;
+	margin-bottom: 15px;
+	border: 1px solid #cbcbcb;
+  border-radius: 3px;
+}
+#findPW-detail label .input-code {
+	width: 114px;
+}
+
+/*完善资料领取VIP*/
+.perfect-for-vip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+}
+.perfect-context {
+	position: relative;
+  top: 50%;
+	width: 460px;
+	height: 320px;
+	margin: -100px auto 0;
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+.perfect-context > img {
+	position: absolute;
+  top: -178px;
+  left: -69px;
+  width: 682px;
+}
+.input-div {
+	margin: 10px auto;
+	width: 300px;
+}
+.input-div img {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	vertical-align: top;
+}
+.input-div input {
+	border: none;
+  border-bottom: 1px solid #c6c6c6;
+  margin-left: 5px;
+  height: 24px;
+}
+.input-div span {
+	display: inline-block;
+  border: 1px solid #c6c6c6;
+  background-color: #81cc46;
+  height: 24px;
+  line-height: 24px;
+  width: 80px;
+  text-align: center;
+  color: #fff;
+  margin-left: 5px;
+  cursor: pointer;
+  vertical-align: top;
+}
+.sure-btn {
+	width: 164px;
+	height: 35px;
+	margin: 25px auto;
+	background: url(../images/buttonbg.png) no-repeat;
+	background-size: auto 100%;
+	text-align: center;
+	line-height: 35px;
+	color: #fff;
+	cursor: pointer;
+}
+.cancel-btn {
+	display: block;
+	width: 120px;
+	margin: 0 auto;
+	text-decoration: underline;
+	text-align: center;
+	cursor: pointer;
+}
+/*完善资料领取VIP end*/
+#foot_bottom{
+  position: relative;
+  height: 100px;
+  width: 100%;
+  color: #fff;
+}
+#foot_bottom a{
+	text-decoration: none;
+	color: #fff;
+}
+body.login .foot_bottom{
+  display: block;
+}
+.bound_text{
+	color:#59607b;
+	margin-left: -29px;
+}
+.package-renewal-box {
+  background: rgba(0,0,0,.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.package-renewal-box .package-renewal-reminder {
+  width: 350px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -175px;
+  margin-top: -110px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.package-renewal-box .renewal-tip {
+  background: #f0f0f0;
+  line-height: 40px;
+  padding-left: 20px;
+}
+.package-renewal-box .package-name {
+  padding: 30px 30px 20px 30px;
+  line-height: 30px;
+  color: #4d4e53;
+}
+.package-renewal-box input[type="checkbox"] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+.package-renewal-box .package-renewal-btn {
+  display: inline-block;
+  background: #ff7100;
+  color: #fff;
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 4px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+.package-renewal-box .close-renewal-box {
+  float: right;
+  margin-right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.package-renewal-box .package-renewal-icon {
+  color: #fb3337;
+  border: 1px solid;
+  border-radius: 50%;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  margin-right: 5px;
+}
+.sms-landing{
+  margin-left: 247px;
+  margin-top: -12px;
+  display: inline-block;
+  color: #3091f2;
+  cursor: pointer;
+}   
+div.dynamic-cipher{
+  display: none;
+  margin-left: 21px;
+  width: 300px;
+  margin-top: 10px;
+}
+div.dynamic-cipher input{
+  width: 177px;
+  height: 37px;
+}
+.get-password{
+  width: 102px;
+  height: 40px;
+  background-color: #3091f2;
+  color: #fff;
+  vertical-align: middle;
+  line-height: 42px;
+  text-align: center;
+  display: inline-block;
+  margin-left: -4px;
+  cursor: pointer;
+}
+.form-title-text{
+  color:#59607b;
+  font-size:14px;
+  padding-top: 9px;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.account-password-login{
+  display: none;
+  margin-left: 219px;
+  margin-top: -12px;
+  cursor: pointer;
+  color: #3091f2;
+}
+.registration-agreement{
+  margin-left: 20px;
+  display: none;
+}
+.registration-prompts{
+  color: #FF0000;
+  font-size: 12px;
+  margin: -2px 22px;
+  display: none;
+  width: 300px;
+}
+.perfect-information{
+  background: rgba(0,0,0,.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.perfect-information-main{
+  width: 545px;
+  height: 297px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -272px;
+  margin-top: -218px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.perfect-information-title{
+  border-bottom: 1px solid #E8E8F0;
+}
+.perfect-information-close{
+  font-size: 22px;
+  color: #D5D5DE;
+  margin-left: 360px;
+  cursor: pointer;
+}
+.perfect-information-content {
+ color: #313445;
+ text-align: center;
+ margin-top: 20px;
+ border-bottom: 1px solid #E8E8F0;
+ padding-bottom: 40px;
+}
+.perfect-information-content input{
+  margin-top: 20px;
+  padding-left:50px;  
+}
+.fill_in_login input::-webkit-input-placeholder {
+  color: #9FA5BB;
+}
+.fill_in_login input::-moz-input-placeholder {
+  color: #9FA5BB;
+}
+.fill_in_login input::-ms-input-placeholder {
+  color: #9FA5BB;
+}
+
+.fill_in_login input{
+ color: #303445;
+}
+.perfect-information-confirm{
+  width: 120px;
+  height: 40px;
+  background-color: #3091F2;
+  border-radius: 2px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  margin: 20px 400px;
+  cursor: pointer;
+}
+input#reg-contact:hover {
+  border:1px solid #3091f2;
+}
+input#register_pw:hover {
+  border:1px solid #3091f2;
+}
+input#perfit-pic-code:hover {
+  border:1px solid #3091f2;
+}
+input#get-complete-code:hover {
+  border:1px solid #3091f2;
+}
+.submit-btn:hover,
+.sms-landing:hover,
+#to-reg:hover,
+.forget-PW:hover,
+.login-wx:hover,
+.login_qq:hover,
+.account-password-login:hover,
+.get-password:hover{
+  opacity: .8;
+}

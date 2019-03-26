@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>登录</title>
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<meta charset="UTF-8" name="description" content="深圳市咫尺网络科技开发有限公司，专注于移动互联网营销解决方案，拥有微信服务号咫尺网络，微社区微活动应用，及酷炫的邀请函微页等产品，提供快捷方便活动管理，分享、报名统计，营销推广等服务。精彩活动，尽在咫尺！丰富您的活动，精彩您的人生，快来发起属于您的活动吧！" />
+	<meta name="keywords" content="咫尺网络,微活动,咫尺活动,微页,咫尺网络,微杂志,微邀请函,喜帖,电子邀请函,H5应用,APP,微场景,场景应用,微场景制作,场景应用制作" />
+	<!-- html头信息修改 -->
+	<meta name="applicable-device" content="pc" />
+	<meta http-equiv="Cache-Control" content="no-transform"/>
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="mobile-agent" content="format=xhtml; url=http://m.jisuapp.cn" />
+	<meta name="mobile-agent" content="format=html5; url=http://m.jisuapp.cn"/>
+	<meta name="mobile-agent" content="format=wml; url=http://m.jisuapp.cn"/>
+	<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.jisuapp.cn" />
+	<link rel="canonical" href="http://www.jisuapp.cn" />
+	<link rel="shortcut icon" href="http://cdn.jisuapp.cn/zhichi_frontend/static/common/images/favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" href="static/css/login.css"/>
+
+	<script src="static/js/jquery-1.11.1.min.js"></script>
+	<script src="static/js/jquery.md5.js"></script>
+	<script src="static/js/cookie.js"></script>
+	<script src="static/js/login.js"></script>
+	<script src="static/js/common.js"></script>
+	<script>
+	// 判断页面是否为登录页面
+		var pathSearch = window.location.search;
+		if ( !(/\?r\=login\/Ulogin$/i.test(pathSearch)) ){
+			 $("body").removeClass('login');
+		}//
+	  $(function(){
+	  	loginFunc();
+	  })
+	  function loginFunc(){
+			$.ajax({
+				url: '/index.php?r=Login/loginQrcode',
+				type: 'get',
+				dataType: 'json',
+				data: {},
+				success: function(data){
+					if(data.status == 0){
+						$('.code-img').attr('src',data.data);
+						$('#qrcode-login').attr('src',data.data);
+						$('#scan-before img').attr('src',data.data);
+					}else{
+						alertTip('二维码请求失败 ' + data.data);
+					}
+				},
+				error: function(data){
+					alertTip('二维码请求失败 ' + data.data);
+				}
+			});
+			num = 1;
+			cometRequest();
+	  }
+	  function cometRequest(){
+	  	var totalnum=15,
+	  	    turnurl = $('body').attr('url'),
+	  	    bound_user = $('#bound_user')[0],
+	  	    tnum = 1;
+	    $.ajax({
+	    	async : true,
+	      type: 'get',
+	      dataType: 'json',
+	      url: '/index.php?r=Login/checkLogin',
+	      data: {}, //80秒后无论结果服务器都返回数据
+	      success: function (data, textStatus) {
+	        //从服务器得到数据，显示数据并继续查询
+	        if (data.status == 0) {
+	          if(data.is_complete == 1){
+							window.location.href= turnurl;
+	          }else if(data.is_complete == 2){
+	          	$('#reg-contact').val(data.username);
+	          	// $('#reg-type').hide();
+	          	// $('#scan-after').removeClass('hide').siblings('div').addClass('hide');
+	          	// $('#to-reg').trigger('click');
+	          	$('#register-detail').removeClass('hide').siblings('div').addClass('hide');
+	            $('.w_register,.w_enter,#login_enroll,existing_account').hide();
+		          $('#login_in,.w_phone,#register-nav,.login_reset,nav,.long-line').show();
+		          $("body").removeClass('login');
+		          	bound_user.innerHTML = '微信';
+							$('.w_phone').css({'margin-left': '-752%'});
+							$('.nav.hide').removeClass('hide');
+	          }
+	        } else if(data.status == 1){
+	        	if(num < totalnum){
+	        		num++;
+	          	checktime = setTimeout(function(){
+	          		cometRequest();
+	          	}, 5000);
+	        	}else{
+	            if(tnum < 5){
+	              loginFunc();
+	            	tnum++;
+	            }
+	        	}
+	        }
+	      },
+	        //Ajax请求超时，继续查询
+	      error: function (XMLHttpRequest, textStatus, errorThrown) {
+	        setTimeout(function(){
+	          		cometRequest();
+	          	}, 5000);
+	      }
+	    });
+		}
+	</script>
+ <!-- jisuapp百度统计代码 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?dbc2f06ada4968aa325cbb4e8932d648";
+var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--  M版 百度推广统计代码  -->
+<!--  小程序商城百度统计代码  -->
+
+
+<!-- 资讯统计代码  -->
+<!-- 咫尺网络统计代码  -->
+<!-- 学院统计代码  -->
+<!-- 问答统计代码  -->
+<!-- 学院M版统计代码 -->
+<!-- 360统计代码 -->
+<!-- 招商统计代码 -->
+
+</head>
+<body url='http://www.jisuapp.cn' istm='' class="login" isZhao="">
+<div class="nav" style="background-color:#fff">
+	<nav style="display:none">
+			<a href="/" style="position: absolute;width: 135px;height: 78px;top: 0;"></a>
+	<div>
+	<p style="color:#888888;" class="w_enter">| &nbsp;&nbsp;欢迎登录</p>
+	</div>
+	<div>
+	<p style="color:#888888;display:none;margin-left: -374%;" class="w_pw">| &nbsp;&nbsp;密码找回</p>
+	</div>
+	<div>
+	<p style="color:#888888;display:none;margin-left: -8%;" class="w_phone">| &nbsp;&nbsp;手机绑定</p>
+	</div>
+	<div>
+	<p style="color:#888888;display:none;position: relative;margin-left: -820px;" class="w_register">| &nbsp;&nbsp;欢迎注册</p>
+	</div>
+
+
+		<!-- <div id="login-nav" class="login-nav">
+			<div style="color:#959595;">还没有账号？<span id="to-reg" register-type="0">注册</span></div>
+		</div> -->
+		<div id="register-nav" style="display:none;">
+			<div style="color:#959595;position: absolute;top: 3%;right: 6%;"><span class="existing_account">已有账号？</span>
+			<span id="to-login" register-type="0">登录</span>
+			</div>
+		</div>
+	</nav>
+</div>
+	<span class="long-line" style="display:none"></span>
+	<span class="color:#888888；margin:2% 19%;display:inline-block;"></span>
+	<div id="login-detail" style="overflow: hidden;">
+		<div style="position: absolute;display: inline-block;margin-left: 15%; margin-top: 0%;">
+    <div style="padding: 84px 7px;">
+    <a href="http://www.zhichiwangluo.com/"><img src="static/picture/lg_logo.png" alt=""></a>
+    </div>
+    <img src="static/picture/lg_line.png" alt="" style="position: absolute;top: 160px;" />
+    <div style="color:#fff;">
+    	<span><img style="width:50px;vertical-align: middle;" src="static/picture/lg_user.svg" alt="" /></span>
+    	<span style="font-size:26px">百万用户首选小程序开发工具</span>
+    	<p><img style="width:30px;vertical-align: middle;" src="static/picture/lg_draw.svg" alt="" /> 3分钟一键生成小程序</p>
+    	<p><img style="width:30px;vertical-align: middle;" src="static/picture/lg_draw.svg" alt="" /> 100多个行业模板直接套用</p>
+    	<p><img style="width:30px;vertical-align: middle;" src="static/picture/lg_draw.svg" alt="" /> 丰富的功能组件一键拖拽</p>
+    </div>
+    </div>
+		<div class="input-login">
+			<div class="qrcode" style="display:none;">
+				<p class="qrcode-title"><span class="cross-line"></span>微信扫码登录<span class="cross-line"></span></p>
+				<img id="qrcode-login" src="">
+				<img id="com-login-img" class="hide" src="static/picture/com-login.png" />
+			</div>
+			<div class="login-form" style="width:314px;padding-top: 19px;height:498px;display: inline-block">
+				<p class="form-title"><span style="color:#59607b;font-size:24px;" id="login-type">账号登录</span></p>
+				<p class="form-title"><span class="form-title-text">推荐您绑定手机号，更加安全。</span></p>
+				<span class="sms-landing">短信登录</span>
+				<span class="account-password-login">账号密码登录</span>
+				<div style="width:437px;">
+				<!-- <img src="static/picture/login_account.png" alt="" style="vertical-align: middle;border: 1px solid #cbcbcb;border-right: none;margin: -4px;"> -->
+				<input id="login-username" style="margin-left:20px;" type="text" placeholder="邮箱/手机"><img class="login_eliminate" src="static/picture/login_eliminate.png" style="margin: -4px -19px;cursor: pointer;display:none" alt="" />
+				</div>
+				<div id='registration-prompts' style="display: none;">
+				<p class="registration-prompts">手机号码尚未注册，短信登录默认注册新的咫尺账号</p>
+		  	</div>
+				<div style="width:437px;" class="password-input">
+				<!-- <img src="static/picture/login_pw.png" alt="" style="vertical-align: middle;border: 1px solid #cbcbcb;border-right: none;margin: -4px;"> -->
+				<input id="login-password" style="margin-left:20px;margin-top:15px;" type="password" placeholder="密码"><img class="login_eliminate" src="static/picture/login_eliminate.png" style="margin: -12px -19px;cursor: pointer;display:none" alt="" />
+				</div>
+				<div class="graphic-verification" style="display:none;margin-left: 20px;width:300px;margin-top: -3px;">
+				<input type="text" placeholder="请输入验证码" id="login-pic-code" autocomplete="new-password" style="width:176px;height: 38px;" />
+	      <span style="border: 1px solid #cbcbcb;width: 101px;display: inline-block;height: 40px;border-left: none;margin: 3px -3px;">
+				<img style="width: 101px;height: 38px;display: inline-block;vertical-align: middle;" class="pic-code getPicCode" src="static/picture/index.php" /></span>
+			  </div>
+				<div class="dynamic-cipher">
+				<input type="text" id="dynamic-cipher" placeholder="动态密码" autocomplete="new-password" />
+				<span class="get-password">获取动态密码</span>
+				</div>
+				<div class="PW-operate" style="width:351px;margin-left: 14px;margin-top: 10px;">
+					<label class="pw-S-F" style="display:inline-block;font-size: 12px;cursor: pointer;">
+						<input style="width: 17px;height: 13px;cursor: pointer;vertical-align: middle;opacity: 0;" id="save-PW" type="checkbox" />
+						<img class="checkbox_no" style="cursor: pointer;vertical-align: middle;margin-left: -18px;margin-top: -3px; background: #fff;" src="static/picture/checkbox_no.png" />
+						<img class="checkbox_yes" style="cursor: pointer;vertical-align: middle;margin-left: -18px;display:none;margin-top: -3px;"  src="static/picture/checkbox_yes.png" />
+						<span style="margin-left: 4px;">7天内自动登录</span>
+					</label>
+				    <span id="to-reg" register-type="0" style="font-size:14px;color:#3091f2;cursor: pointer;margin-left:53px;display: inline-block;font-size: 12px;">注册账号
+						</span>
+						<span class="forget-PW"  style="margin-top: -3px;display: inline-block; vertical-align: middle;text-decoration:none;margin-left:18px;color:#3091f2;" id="forget-PW">忘记密码
+						</span>
+				</div>
+				<p class="registration-agreement">
+					<input id="registration-agreement" style="width: 16px;height: 14px;vertical-align: middle;margin-left: 0px;" type="checkbox" checked ='checked' " />
+					<a href="/index.php?r=Login/UserProtocal" target="_blank" style="text-decoration: none;">
+						<label style="cursor: pointer;font-size: 12px;margin: 0 3px;">
+						  <span style="color: #59607B;">同意</span>
+							<span style="color: #3091f2;">《咫尺网络用户注册协议》</span>
+						</label>
+					</a>
+				</p>
+				<div style="height:31px;margin-left:20px;" class="submit-btn" id="login-btn" login-type="0">登录</div>
+				<div style="height:31px;margin-left:20px;display: none;margin-top: 7px;" class="submit-btn" id="SMS-landing" login-type="0">登录</div>
+
+				<!-- 第三方登录 start -->
+				<p class="qrcode-title" style="width: 475px;margin-left: -76px;"><span class="cross-line" style="width:90px;"></span>第三方账号登录<span class="cross-line" style="width:90px;"></span></p>
+				<div class="img-qq" style="width:300px;margin-left:20px;margin-top: -3px;">
+				  <a class="login-wx" href="javascript:;"  onclick="setCookie('phone_bound', 1);" ><img title="微信" src="static/picture/login_wx.png" /></a>
+					<a class="login_qq"  href="//www
+					.zhichiwangluo.com/index.php?r=Login/qLogin"  onclick="setCookie('phone_bound', 2);"><img title="QQ" src="static/picture/login_qq.png" /></a>
+					<!-- <a class="login_wd" href="/index.php?r=Login/wdlogin"><img title="微店" src="static/picture/wd.png" /></a>
+					<a class="login_qq" href="/index.php?r=login/WMLogin"><img title="微盟" src="static/picture/weimob.png" /></a> -->
+					<a class="login_qq" href="/index.php?r=login/WBLogin"  onclick="setCookie('phone_bound', 3);"><img title="微博" src="static/picture/login_wb.png" />
+					</a>
+				</div>
+				<div style="color: #9fa5bb;width: 344px;">
+						<span style="margin: 10px 39px;">微信账号</span>
+						<span style="margin: 10px 0px;">QQ账号</span>
+						<span style="margin: 10px 38px;">微博账号</span>
+				</div>
+				<!-- 第三方登录 end -->
+			</div>
+			<!-- 微信二维码 -->
+				<div class="wx-login" style="display: block;display:none;margin: 4.2% 64.5%;text-align: center;">
+					<div class="title">微信登录</div>
+					<img class="code-img" src="" />
+					<p style="text-align: center;"><span class="cross-Line"></span>微信扫码登录<span class="cross-Line"></span></p>
+					<p class="account-login" style="margin-top: 30px;text-align: center;color: #3091f2;cursor: pointer;">返回账号登录</p>
+				</div>
+		</div>
+	</div>
+	<div id="register-detail" class="hide">
+  	<div class="personage_register" style="line-height: 71px;text-align: center;" >
+    	<!-- 填写账号 -->
+			<div>
+    	<div class="fill_in_login" style="margin: 18% 25%;text-align: left; width: 500px; height: 350px;">
+    	   <div class="bound_text" ><img src="static/picture/bound_draw.svg" alt="" style="width:17px" /> 您已通过<span style="width:35px;font-size: 14px;    margin-top: -2px;" id="bound_user"></span>账号登录成功，请绑定手机号，以后登录更方便！</div>
+      	<div class="login_phone"><span class="phone_login">手机</span><input style="width:278px;margin-left: 3px;" id="reg-contact" autocomplete="new-password" type="text" placeholder="请输入11位手机号">
+        </div>
+				<div class="login_reset">
+						<span>密码</span>
+						<input style="width:278px;word-spacing: 76px;" id="register_pw" type="password" placeholder="请输入6-20位密码" autocomplete="new-password" /><img class="login_corner_mark" src="static/picture/login_conceal.png" alt="" style="vertical-align: middle;margin: -33px;cursor: pointer;" />
+        </div>
+        <div class="register_verify">
+					<span style="margin-left: -17px;">图形验证码</span>
+					<input type="text" placeholder="请输入验证码" id="perfit-pic-code" style="width:176px;vertical-align: top;margin-top: 17px;margin-left: 16px;" />
+          <span style="border: 1px solid #D5D5DE;width: 101px;border-left:none;margin-left: -4px;">
+					<img style="width: 100%;height: 100%;display: block;" class="pic-code getPicCode" src="static/picture/index.php" />
+				</span>
+        </div>
+      	<div>
+					<span style="margin-left: -17px;">短信验证码</span>
+						<input type="text" placeholder="请输入短信验证码" id="get-complete-code" style="width:176px;vertical-align: top;margin-top: 17px;margin-left: 16px;" />
+          	<span style="width: 102px;background: #eaeaee;border-left: none;margin-left: -5px;height: 40px;">
+						<span  class="get-code" id="pic-code" style="display: block;width: 100%;background: #3091f2;color:#fff;border-left: none;cursor: pointer;height: 100%;">获取验证码</span>
+					</span>
+        </div>
+				<div>
+      	<input id="register_deal" style="width: 16px;height: 14px;vertical-align: middle;margin-left: 68px;" type="checkbox" checked ='checked' " />
+				<a href="/index.php?r=Login/UserProtocal" target="_blank" style="text-decoration:none;">
+					<label style="cursor: pointer;font-size: 12px;margin: 0 3px;">
+						<span style="color:#59607B;display: inline-block;width: 28px;">同意</span>
+						<span style="color:#3091f2;width:148px">《咫尺网络用户注册协议》</span>
+					</label>
+				</a>
+			</div>
+      	<div class="submit-btn" id="login_in" style="width: 278px;line-height: 38px;margin-left: 69px;">确定</div>
+      	<div class="submit-btn" id="login_enroll" style="width: 278px;display: none;line-height: 38px;margin-left: 69px;">注册</div>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+	<div id="findPW-detail" class="hide" type="email">
+	 <p style="color:#888888;position: absolute;left: 18.5%;top: 12%;">找回登录密码</p>
+  </div>
+	<div class="login_tab"><span class="login_fill_in">1.填写账号</span><!-- <span class="login_verify">2.身份验证</span> --><span class="login_reset" id="login-reset">2.密码重置</span><span class="login_modification">3.修改成功</span>
+  </div>
+
+	<div class="find-password" style="display:none;line-height: 71px;text-align: center;" >
+  	<div class="fill_in_login" style="margin: 6% 34%;text-align: left; width: 300px; height: 150px;">
+    	<div style="width:340px"><input id="user-phone" type="text" placeholder="请输入邮箱/手机号"><img class="login_eliminate" src="static/picture/login_eliminate.png" style="margin: -4px -19px;cursor: pointer;display:none" alt="" />
+      </div>
+    	<div style="width: 340px;"><input type="text" placeholder="请输入验证码" id="verification_code" style="width:211px;vertical-align: top;margin-top: 17px;" />
+    	<span style="border: 1px solid #D5D5DE;width: 101px;border-left: none;	margin-left: -4px;"><img style="width: 100%;height: 100%;display: block;" class="pic-code getPicCode" src="static/picture/index.php" /></span>
+      </div>
+    	<div style="width: 340px;"><input type="text" placeholder="请输入6位验证码" id="code" style="width:211px;vertical-align: top;margin-top: 17px;" />
+    	<span style="width: 101px;background: #eaeaee;border-left: none;margin-left: -5px;height:40px;"><span  class="get-code" id="get-code" style="display: block;width: 100%;background: #3091f2;color: #fff;border-left: none;cursor: pointer;height: 100%;">获取验证码</span></span>
+      </div>
+  	  <div class="submit-btn" id="find-btn" style="width: 318px;line-height: 38px;">下一步</div>
+  	</div>
+	</div>
+<!-- 密码重置 -->
+	<div class="reset_login" style="margin: 15% 38%;text-align: left; width: 400px; height: 150px;display:none;line-height: 71px;">
+  	<div class="login_reset"><input type="text" style="display: none;"><input id="new-pw1" type="text" placeholder="请输入新密码" onfocus="this.type='password'" autocomplete="off" /><img class="login_eliminate" src="static/picture/login_eliminate.png" style="margin: -4px -19px;cursor: pointer;display:none" alt="" />
+    </div>
+  	<div><input type="text" style="display: none;" /><input type="text" placeholder="请再次确认密码" id="new-pw2" onfocus="this.type='password'" autocomplete="off" /><img class="login_eliminate" src="static/picture/login_eliminate.png" style="margin: -4px -19px;cursor: pointer;display:none" alt="" />
+  	</div>
+  	<div class="submit-btn" id="find_reset_btn" style="width: 319px;line-height: 38px;">下一步</div>
+	</div>
+<!-- 修改成功 -->
+	<div class="modification_login" style="margin: 6% 34%;text-align: left; width: 400px; height: 150px;display:none;">
+  	<p class="verify_text" style="position: absolute;top: 33%;">恭喜您：重置密码成功，请牢记新的登录密码！<a style="color:#448dbf;" href='http://www.jisuapp.cn'>点击立即跳转</a></p>
+  </div>
+	<!-- <img src="static/picture/lg_logo.png" alt=""> -->
+	<span class="foot_line" ></span>
+	<div id="foot_bottom" class="foot_bottom">
+  	<span style="position: absolute;bottom: 45%;left: 17%;">深圳市咫尺网络科技开发有限公司©2015 咫尺网络 <a href="http://www.miitbeian.gov.cn" target="blank">粤ICP备16110707号-1</a></span>
+  	<span style="position: absolute;bottom: 45%;left: 68%;"><span><a style="" href="/company/" target="blank">公司简介 <span style="opacity:0.5"> |</span> </a></span>
+  	<span><a href="/about/" target="blank">关于我们 <span style="opacity:0.5"> |</span></a></span>
+  	<span><a href="/accidence/" target="blank">帮助中心<span style="opacity:0.5"> |</span></a></span>
+  	<span><a href="/news/" target="blank">媒体报导</a></span></span>
+  </div>
+	<div class="package-renewal-box">
+		<div class="package-renewal-reminder">
+			<div class="renewal-tip">提示<span class="close-renewal-box">×</span></div>
+			<div class="package-name"><span class="package-renewal-icon">！</span>尊敬的用户，您的<span class="package-version"></span>请前往续费，以免影响您的使用。</div>
+			<div style="text-align: center;padding-bottom: 20px;"><input type="checkbox" id="notRemind" style="vertical-align: middle;"><label for="notRemind" style="vertical-align: middle;">不再提示</label><div class="package-renewal-btn">续费套餐</div></div>
+		</div>
+	</div>
+	<!-- 短信登录成功弹窗 -->
+	<div class="perfect-information">
+	<div class="perfect-information-main">
+   <div class="perfect-information-title">
+			<span style="font-size:18px;margin: 19px 21px;display: inline-block;color:#313445;">完善用户信息</span>
+			<span class="perfect-information-close">x</span>
+	 </div>
+	 <div class="perfect-information-content">
+			<p>设置账号密码，可采用<span style="color:#3091f2;">手机号 + 密码</span>的形式登录咫尺网络所有产品</p>
+			<input type="password" placeholder="请输入6-20位密码" id="SMS-cipher" autocomplete="new-password" />
+			<span style="position: absolute;left: 99px;bottom: 129px;">密码</span>
+	 </div>
+	 <div class="perfect-information-confirm">确认</div></a>
+	</div>
+	</div>
+</body>
+<script>
+	$("#to-login").click(function (){
+		$("body").addClass("login");
+	})
+	$("#to-reg, #forget-PW").click(function (){
+		$("body").removeClass("login");
+	})
+</script>
+</html>

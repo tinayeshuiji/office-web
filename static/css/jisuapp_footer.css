@@ -1,0 +1,125 @@
+﻿.bt-nav-box{
+    width: 1140px;
+    min-height: 400px;
+    margin: 0 auto;
+    position: relative;
+    color: #C7C7C7;
+    padding:40px 0;
+}
+.bt-nav-box *{
+    font-size:12px;
+    color: #C7C7C7;
+}
+.bt-nav-box a:hover{
+    color: #3091F2;
+}
+.bt-nav-box h1,.bt-nav-box h3,.bt-nav-phone p,.bt-nav-foot_title,.bt-nav-moreInfo{
+    color: #FFFFFF;
+}
+.bt-nav-header{
+    overflow: hidden;
+}
+.bt-nav-phone,.bt-nav-knows{
+    float: left;
+    left: 0;
+}
+.bt-nav-phone{
+    width: 193px;
+    border-right: 1px #575757 solid;
+    padding-left:64px;
+}
+.bt-nav-phone>svg{
+    top: 25px;
+    position: absolute;
+    left: -15px;
+}
+.bt-nav-phone>p{
+    font-size:18px;
+    margin-top: 14px;
+    margin-bottom: 27px;
+}
+.bt-nav-phone li{
+    margin-bottom: 14px
+}
+.bt-nav-phone li a{
+    font-size: 14px;
+}
+.bt-nav-knows>li{
+    float: left;
+}
+.bt-nav-knows>li>ul>h3{
+    margin-bottom: 30px;
+}
+.bt-nav-knows>li>ul>li{
+    margin-bottom: 15px;
+}
+.bt-nav-knows_1{
+    margin-left: 96px;
+}
+.bt-nav-knows_2{
+    margin-left: 144px;
+}
+.bt-nav-knows_3{
+    margin-left: 142px;
+}
+.bt-nav-knows_3 .bt-nav-cpy-address{
+    display: inline-block;
+    vertical-align: top;
+}
+.bt-nav-knows_4{
+    margin-left: 105px;
+}
+.bt-nav-knows_4 img{
+    width:70px;
+    height:70px;
+    margin: 7px auto;
+    display:none;
+}
+.bt-nav-knows_4>ul>li.active{
+    margin-bottom: 0px;
+}
+.bt-nav-knows_4>ul>li.active>img{
+    display:block;
+}
+.bt-nav-body{
+   margin-top: 25px;
+}
+.bt-nav-body ul{
+    overflow: hidden;
+    line-height: 24px;
+    border-bottom: 1px solid #575757;
+}
+.bt-nav-body li{
+    float:left;
+    margin-left:5px;
+}
+.bt-nav-body li:first-of-type{
+    margin-left: 0;
+}
+.bt-nav-body li img{
+    width:24px;
+    height:24px;
+}
+.bt-nav-footer .copyright,.bt-nav-footer .copyright a{
+    color:#FFFFFF;
+}
+.bt-nav-foot_title{
+    margin-top: 10px;
+}
+.bt-nav-fre_link>span{
+    display: inline-block;
+    margin-right:26px; 
+    margin-top: 8px;
+}
+
+.bt-nav-footer .copyright{
+    margin-top: 40px;
+    text-align: center;
+}
+.bt-nav-footer .copyright img{
+    position:relative;
+    top:8px;
+    width:28px;
+    height:28px;
+    margin-left: 18px;
+}

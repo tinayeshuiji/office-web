@@ -1,0 +1,51 @@
+﻿.footer-area {
+	padding: 60px 0;
+	/*min-height: 220px;*/
+	text-align: center;
+	background: rgba(47, 48, 52, 1);
+	color: #d5d6d6;
+	overflow: hidden;
+	clear: both;
+}
+.footer-content {
+	margin: 0 auto;
+	width: 1200px;
+}
+.footer-area a{
+	color: #d5d6d6;
+}
+.footer-area .footer-nav {
+	font-size: 16px;
+}
+.footer-area a:hover {
+	color: #3091f2;
+}
+.footer-nav .center-line{
+	display: inline-block;
+	margin: 0 20px;
+	width: 2px;
+	height: 15px;
+	vertical-align: middle;
+	background: #d5d6d6;
+}
+.footer-area .friend-link {
+	text-align: center;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 30px;
+}
+.footer-area .friend-link a {
+	display: inline-block;
+	padding: 3px 10px;
+	font-size: 12px;
+
+}
+.footer-area .company-state {
+	margin-top: 30px;
+	font-size: 12px;
+}
+.footer-area .company-state img{
+	display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}

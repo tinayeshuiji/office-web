@@ -1,0 +1,135 @@
+﻿.consult_contact{
+  position: fixed;
+  bottom: 22%;
+  right: 0;
+  width: 114px;
+  height: 114px;
+  cursor: pointer;
+  z-index: 999;
+}
+.consult_wrap{
+  position: relative;
+  width: 114px;
+  height: 114px;
+}
+.consult_wrap .block_tip{
+  display: none;
+  position: absolute;
+  right: 100px;
+  top: 4px;
+  width: 144.7px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  background: #fff;
+  -webkit-transition: display 1s ease;
+  transition: display 1s ease;
+  z-index: 1;
+  padding: 10px 0 17px 22px;
+  box-shadow: -5px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.consult_wrap .block_tip:after{
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.consult_contact .ball,
+.consult_contact .staff_img,
+.consult_contact .bg-1,
+.consult_contact .bg-2,
+.consult_contact .bg-3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  -webkit-transform: translate3d(-50%,-50%,0);
+          transform: translate3d(-50%,-50%,0);
+}
+.consult_contact .staff_img{
+  z-index: 999;
+}
+@keyframes ballRotate {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.consult_contact  img.ball{
+  top: 20px;
+  width: auto;
+  transform-origin: 0 38px;
+  animation: ballRotate 2.5s infinite linear;
+  z-index: 9999;
+}
+@keyframes bg2Animation {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.consult_contact .bg-2{
+  animation: bg2Animation 2.5s infinite linear;
+}
+.consult_contact:hover .block_tip{
+  display: block;
+}
+.customer-service{
+  font-size: 16px;
+  color: #303445;
+}
+.customer-service-text{
+  font-size: 12px;
+  color: #9FA5BB;
+  padding-bottom: 4px;
+}
+.online-service{
+  width: 119px;
+  height: 30px;
+  background-color: #3091f2;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+}
+.exclusive-customer-service,
+.agent-customer-service{
+  width: 119px;
+  height: 30px;
+  background-color: #3091f2;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+}
+.online-service:hover,
+.exclusive-customer-service:hover,
+.agent-customer-service:hover{
+  opacity: .8;
+}
+
+.online-service img,
+.exclusive-customer-service img,
+.agent-customer-service img{
+  vertical-align: middle;
+  margin: 0 2px;
+  margin-left: 0;
+}

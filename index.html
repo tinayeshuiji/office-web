@@ -1,0 +1,1597 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>    <!-- 微信小程序TDK -->
+    <title>商云聚-微信小程序开发|微信小程序制作平台</title>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta charset="UTF-8" name="description"
+          content=""/>
+    <meta name="keywords" content="小程序,微信小程序,小程序制作,微信小程序制作,小程序工具,微信小程序工具,小程序开发,微信小程序开发,小程序问答,微信小程序问答,小程序平台,微信小程序平台"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.jisuapp.cn/"/>
+    <link rel="canonical" href="http://www.jisuapp.cn/"/>
+    <!-- <link rel="stylesheet" href="static/css/swiper.min.css"> -->
+    <link rel="stylesheet" href="./static/css/common.css"/>
+    <link rel="stylesheet" href="./static/css/index.css"/>
+    <link rel="shortcut icon" href="http://cdn.jisuapp.cn/zhichi_frontend/static/common/images/favicon.ico"
+          type="image/x-icon"/>
+    <script type="text/javascript" src="./static/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.slides.min.js"></script>
+    <script type="text/javascript" src="./static/js/swiper.min.js"></script>
+    <!-- <script type="text/javascript" src="static/js/modernizr-2.7.2.js"></script> -->
+    <script src="./static/js/common.js"></script>
+
+
+    <script type="text/javascript">
+        //获取点击量
+//        function rate(obj) {
+//            $.ajax({
+//                url: "/index.php?r=pc/Index/AddCaroluselPhotoCount",
+//                type: "get",
+//                dataType: "json",
+//                data: {
+//                    id: $(obj).attr('data-img-id')
+//
+//                },
+//                success: function (data) {
+//
+//                }
+//            })
+//        }
+    </script>
+    <!-- jisuapp百度统计代码 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dbc2f06ada4968aa325cbb4e8932d648";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body is_login="0" user_token="" class="webapp">
+<!-- 导航 -->
+
+<link rel="stylesheet" href="static/css/nav.css"/>
+<script type="text/javascript" src="static/js/cookie.js"></script>
+<script type="text/javascript" src="static/js/login.js"></script>
+<div class="nav-wrap" is_login="0" id="automatic_login">
+    <div class="nav-logo nav-logo-img">
+        <h1>微信小程序</h1>
+    </div>
+    <ul class="top-menu">
+        <li class="menu-one">
+            <a href="index.html">首页</a>
+        </li>
+        <!--<li class="menu-one">-->
+            <!--<a href="/make/">制作</a>-->
+        <!--</li>-->
+        <li class="menu-one">
+            <a href="cases.html">案例</a>
+            <!-- <ul style="display: none;">
+                <li class="menu-two"><a href="/index.php?r=pc/Index/appcase" target="_blank">webApp</a></li>
+                <li class="menu-two"><a href="index.php?r=pc/AppRecommend/MiniAppRecommend" target='_blank'>小程序</a></li>
+            </ul> -->
+        </li>
+        <li class="menu-one app-join-nav">
+            <a href="agents.html">小程序加盟</a>
+        </li>
+
+        <!-- <li class="menu-one">
+            <a href="http://shop.jisuapp.cn/" target="_blank">小程序商店</a>
+        </li> -->
+        <!--<li class="menu-one">-->
+            <!--<img src="static/picture/hot-fenghui.png" alt="" class="feng-img">-->
+            <!--<a href="javascript:;" class="summit_link">小程序峰会</a>-->
+        <!--</li>-->
+        <!-- <li class="menu-one">
+<a class="serve" href="#">服务<span class="serve_ico"></span></a>
+<ul style="width: 100%">
+<li class="menu-two"><a href="/intro/" target="_blank">功能介绍</a></li>
+<li class="menu-two"><a href="/agents/" target="_blank">成为代理</a></li>
+<li class="menu-two check_login" data="/index.php?r=pc/IndexNew/WechatSubmit">服务支持</li>
+<li class="menu-two"><a href="/news/" target="_blank">媒体报导</a></li>
+<li class="menu-two"><a href="/index.php?r=pc/AgentSearch/showAgentList&is_app=1" target="_blank">代理查询</a></li>
+<li class="menu-two"><a href="/match/" target="_blank">设计大赛</a></li>
+</ul>
+</li> -->
+        <li class="menu-one">
+            <a href="javascript:;">产品中心</a>
+            <ul style="width: 100%">
+                <li class="menu-two"><a href="intro.html" target="_blank">功能介绍</a></li>
+                <li class="menu-two"><a href="exclusive.html" target="_blank">私人定制</a></li>
+                <!--<li class="menu-two"><a href="http://bbs.zhichiwangluo.com/thread-11334-1-1.html"-->
+                                        <!--target="_blank">教程论坛</a></li>-->
+                <!--<li class="menu-two"><a href="http://school.jisuapp.cn" target="_blank">小程序教程</a></li>-->
+                <!--<li class="menu-two"><a href="http://zixun.jisuapp.cn" target="_blank">小程序资讯</a></li>-->
+                <!--<li class="menu-two"><a href="/index.php?r=pc/Index/UploadWidgetInfo" target="_blank" rel="nofollow">插件平台</a>-->
+                <!--</li>-->
+            </ul>
+        </li>
+        <li class="menu-one">
+            <a href="aboutus.html">关于我们</a>
+        </li>
+        <!-- <li class="menu-one">
+            <a href="/index.php?r=pc/Index/homePage" target="_blank">微页</a>
+        </li> -->
+        <!-- <li class="menu-one">
+            <a href="http://bbs.zhichiwangluo.com/forum.php?mod=viewthread&tid=11085&page=1&extra=#pid12591" target="_blank">帮助</a>
+        </li> -->
+        <!-- <li class="menu-one">
+            <a href="index.php?r=pc/Index/AboutUs#0&is_app=1">公司简介</a>
+        </li>
+        <li class="menu-one">
+            <a href="/index.php?r=pc/Index/Contact&is_app=1">关于我们</a>
+        </li> -->
+    </ul>
+    <div class="nav-login">
+        <p class="login-span-wrap"><a href="login.html"><span class="nav-lglogin">登录</span></a><a
+                href="/index.php?r=login/Ulogin&reg=1"><span class="nav-reg">注册</span></a></p>
+    </div>
+</div>
+<!-- 兑换码弹窗 -->
+<div id="voucher" style="display: none;">
+    <div class="purchaseExchange">
+        <div class="voucherTitle">兑换码兑换<img src="static/picture/cancelbtn.png" class="voucherCancel"></div>
+        <!-- <div class="purchaseExchange-content">
+          <div>
+            <img src="static/picture/buyonline.png">
+            <div class="purchase-btn">在线购买</div>
+          </div>
+          <div>
+            <img src="static/picture/redemption.png">
+            <div class="exchange-btn">兑换码兑换</div>
+          </div>
+        </div> -->
+    </div>
+    <div class="enterData">
+        <div class="voucherTitle">兑换码兑换<img src="static/picture/cancelbtn.png" class="voucherCancel"></div>
+        <div class="enterDataContent">
+            <div style="margin-top: 10px"><span class="contentTitle">输入兑换码：</span><input type="text" name=""
+                                                                                         class="VoucherCode"/></div>
+            <div style="text-align: right;margin-top: 5px;"><a
+                    href="https://market.cloud.tencent.com/list?q=%E5%8D%B3%E9%80%9F%E5%BA%94%E7%94%A8" target="_blank"
+                    style="color: #616161;text-decoration: underline;">没有兑换码？去腾讯云商城购买</a></div>
+            <div style="margin-top: 20px;"><span class="contentTitle">输入验证码：</span><input type="text" name=""
+                                                                                          class="VerificationCode"/><img
+                    src="" class="VerificationImg"/></div>
+            <div style="text-align: right;margin-top: 30px;">
+                <!-- <div class="goBack-btn">返回</div> -->
+                <div class="sureData">兑换</div>
+            </div>
+        </div>
+    </div>
+    <div class="isRedeemed">
+        <div style="margin-bottom: 15px;font-size: 16px;font-weight: 600;"><img src="static/picture/besure.png"
+                                                                                style="display: inline-block;vertical-align: middle;margin-right: 10px;"><span
+                style="display: inline-block;vertical-align: middle;">是否兑换？</span></div>
+        <div style="line-height: 25px;">您即将兑换<span class="exchangeName"></span>的试用权，确认兑换？</div>
+        <div style="text-align: right;padding-top: 30px;">
+            <div class="RedeemedCancel">取消</div>
+            <div class="sureSubmit">确认</div>
+        </div>
+    </div>
+    <div class="specialExchange">
+        <div style="margin-bottom: 15px;font-size: 16px;font-weight: 600;"><img src="static/picture/buysuccess.png"
+                                                                                style="display: inline-block;vertical-align: middle;margin-right: 10px;"><span
+                style="display: inline-block;vertical-align: middle;">兑换成功，请联系客服领取视频！</span></div>
+        <div>客服号：<a href="http://wpa.qq.com/msgrd?v=3&uin=3514587551&site=qq" target="_blank">3514587551</a></div>
+        <div style="text-align: right;margin-top: 30px;">
+            <div class="sureSpecialExchange">确认</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="static/js/nav.js"></script>
+<link rel="stylesheet" href="static/css/app_login_reg.css">
+
+<script type="text/javascript" src="static/js/jquery.md5.js"></script>
+<script type="text/javascript" src="static/js/cookie.js"></script>
+<script type="text/javascript" src="static/js/app_login_reg.js"></script>
+<div class="lr-mask" id="login_wrap" user_token="">
+    <div class="lr" id="login-panel">
+        <div class="lr-left">
+            <div class="reg-wrap">
+                <img src="static/picture/jisulogo.jpg">
+
+                <div class="to-reg">注册</div>
+            </div>
+            <div class="login-wrap">
+                <img src="static/picture/jisulogo.jpg">
+
+                <div class="to-login">登录</div>
+            </div>
+        </div>
+        <div class="lr-right">
+            <div class="login-info-wrap" style="padding-top: 34px;">
+                <div class="title">登录<span>(个人/企业账号)</span></div>
+                <input style="margin-top: 60px;" id="login-username" type="text" placeholder="邮箱/手机号"
+                       class="long-input"/>
+                <input style="margin-top: 20px;" id="login-password" type="password" placeholder="请输入6-20位密码"
+                       class="long-input"/>
+
+                <div class="Rempw"><input type="checkbox" id="remberPw" checked/><label for="remberPw">记住密码</label><span
+                        class="forgetPw">忘记密码</span></div>
+                <div id="login-btn" class="login-btn">登录</div>
+                <p style="padding: 10px 0;">还没有账号？<span class="reg-now">免费注册</span></p>
+
+                <div style="margin-top: 10px;"><span class="cross-Line"></span><span
+                        style="margin: 0 10px;font-size: 16px;">第三方账号登录</span><span class="cross-Line"></span></div>
+                <div class="img-qq">
+                    <a class="login-wx" href="javascript:;"><img title="微信" src="static/picture/wx.png"></a>
+                    <a class="login_qq" href="http://www.zhichiwangluo.com/index.php?r=Login/qLogin"><img title="QQ"
+                                                                                                          src="static/picture/qq.png"></a>
+                    <!-- <a class="login_wd" href="/index.php?r=Login/wdlogin"><img title="微店" src="static/picture/wd.png"></a>
+                    <a class="login_qq" href="/index.php?r=login/WMLogin"><img title="微盟" src="static/picture/weimob.png"></a> -->
+                    <a class="login_qq" href="/index.php?r=login/WBLogin"><img title="微博"
+                                                                               src="static/picture/wb.png"></a>
+                </div>
+            </div>
+            <div class="wx-login">
+                <div class="title">微信登录</div>
+                <img class="code-img" src="">
+
+                <p style="text-align: center;"><span class="cross-Line"></span>微信扫码登录<span class="cross-Line"></span>
+                </p>
+
+                <p class="account-login" style="margin-top: 30px;text-align: center;color: #3091f2;cursor: pointer;">
+                    返回账号登陆</p>
+            </div>
+            <div class="reg-info-wrap">
+                <div class="reg-type"><span class="active">个人注册</span><span>企业注册</span></div>
+                <div class="person-reg">
+                    <img class="code-img" src="" alt="">
+
+                    <p style="text-align: center;"><span style="width:55px;" class="cross-Line"></span><span
+                            style="margin: 0 5px;">微信扫码注册</span><span style="width:55px;" class="cross-Line"></span></p>
+
+                    <div class="perfit-info">
+                        <input style="margin-top: 60px;" type="text" id="perfit-phone" placeholder="手机号"
+                               class="long-input"/>
+                        <input type="password" placeholder="密码" id="perfit-pw1" class="long-input"/>
+                        <input type="password" placeholder="确认密码" id="perfit-pw2" class="long-input"/>
+                        <input type="text" placeholder="验证码" id="perfit-pic-code"
+                               style="width:70px;vertical-align: top;margin-top: 12px;"/>
+
+                        <div class="getPicCode" style="display: inline-block;margin-top: 7px;"><img class="pic-code"
+                                                                                                    src="static/picture/index.php"><span>看不清，换一张</span>
+                        </div>
+                        <input type="text" placeholder="短信验证码" id="perfit-code" style="width: 177px"/><span
+                            class="getPerfitCode">获取验证码</span>
+                        <input type="text" placeholder="邀请码，可不填" id="perfit-invite" class="long-input"/>
+
+                        <div class="login-btn" id="perfit-info">完善</div>
+                    </div>
+                </div>
+                <div class="company-reg">
+                    <input type="text" id="reg-fullname" placeholder="企业名称" class="long-input"/><!-- <label class="necessary">*</label> -->
+                    <input type="text" id="reg-phone" placeholder="手机号" class="long-input"/><img
+                        style="width: 20px;vertical-align: middle;margin-left: 10px;" id="reg-phone-exist"><!-- <label class="necessary">*</label> -->
+                    <input type="password" class="reg-password long-input" placeholder="密码" class="long-input"/><!-- <label class="necessary">*</label> -->
+                    <input type="password" class="reg-conpassword long-input" placeholder="确认密码" class="long-input"/><!-- <label class="necessary">*</label> -->
+                    <input type="text" placeholder="验证码" id="pic-code"
+                           style="width:70px;vertical-align: top;margin-top: 12px;"/>
+
+                    <div class="getPicCode" style="display: inline-block;margin-top: 7px;"><img class="pic-code"
+                                                                                                src="static/picture/index.php"/><span>看不清，换一张</span>
+                    </div>
+                    <input type="text" id="phone-code" placeholder="短信验证码" class="short-input"
+                           style="margin-top: 15px;width: 146px;"/><span class="getPhoneCode">获取验证码</span>
+                    <select id="reg-company-type">
+                        <option value="政府机构">政府机构</option>
+                        <option value="微信">微信</option>
+                        <option value="传媒广告">传媒广告</option>
+                        <option value="电商">电商</option>
+                        <option value="餐饮">餐饮</option>
+                        <option value="家具">家具</option>
+                        <option value="IT">IT</option>
+                        <option value="教育">教育</option>
+                        <option value="房地产">房地产</option>
+                        <option value="服装">服装</option>
+                        <option value="婚庆">婚庆</option>
+                        <option value="娱乐">娱乐</option>
+                        <option value="旅游">旅游</option>
+                        <option value="汽车">汽车</option>
+                        <option value="美容">美容</option>
+                        <option value="摄影">摄影</option>
+                        <option value="公益">公益</option>
+                        <option value="金融">金融</option>
+                    </select>
+
+                    <div><select id="province-select">
+                        <option disabled selected>选择省</option>
+                    </select><select id="city-select">
+                        <option disabled selected>选择市</option>
+                    </select><select id="area-select">
+                        <option disabled selected>选择区</option>
+                    </select></div>
+                    <div style="margin-top: 15px;"><input id="inviteCode" class="short-input"
+                                                          placeholder="邀请码，可不填"/><span class="reg-btn">注册</span></div>
+                </div>
+            </div>
+            <div class="findBackPw">
+                <div class="title"><span class="findtype" type="phone">手机找回</span><span class="changetype">通过邮箱找回</span>
+                </div>
+                <div class="findByPhone">
+                    <div><input style="margin-top: 60px;width: 265px;" id="by-phone" type="text"
+                                class="account long-input" placeholder="注册手机号"/><img
+                            style="width: 20px;vertical-align: middle;margin-left: 10px;" id="find-phone-exist"></div>
+                    <input type="text" id="phone-code-input" class="short-input" placeholder="短信验证码"/><span
+                        class="get-Phone-Code">获取验证码</span>
+                    <input type="password" id="PnewPw1" class="long-input" placeholder="新密码"/>
+                    <input type="password" id="PnewPw2" class="long-input" placeholder="确认密码"/>
+                    <input type="text" placeholder="验证码" id="findby-pic-code"
+                           style="width:70px;vertical-align: top;margin-top: 12px;"/>
+
+                    <div class="getPicCode" style="display: inline-block;margin-top: 7px;"><img class="pic-code"
+                                                                                                src="static/picture/index.php"><span>看不清，换一张</span>
+                    </div>
+                    <div style="margin-top: 25px;" id='findByPhoneReset' class="login-btn">确认</div>
+                    <p class="login-now" style="margin-top: 30px;text-align: center;color: #3091f2;cursor: pointer;">
+                        我想起来了，去登录 ></p>
+                </div>
+                <div class="findByEmail" style="display: none;">
+                    <input style="margin-top: 60px;" id="by-email" type="text" class="account long-input"
+                           placeholder="绑定邮箱"/>
+                    <input type="text" id="email-code-input" class="short-input" placeholder="邮箱验证码"/><span
+                        class="getCode">获取验证码</span>
+                    <input type="password" id="EnewPw1" class="long-input" placeholder="新密码"/>
+                    <input type="password" id="EnewPw2" class="long-input" placeholder="确认密码"/>
+
+                    <div style="margin-top: 25px;" id='findByEmailReset' class="login-btn">确认</div>
+                    <p class="login-now" style="margin-top: 30px;text-align: center;color: #3091f2;cursor: pointer;">
+                        我想起来了，去登录 ></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 导航完 -->
+<!-- 轮播开始 -->
+<div id="banner-section">
+    <div class="banner-images-area" id="banner-images-area">
+        <!--<a class="banner-image-item active" data-index="slide0"-->
+           <!--target="_blank" data-img-id="216" >-->
+            <!--<img src="static/picture/file_5b5045cf04f04.jpg" alt=""/>-->
+        <!--</a>-->
+        <!--<a class="banner-image-item " data-index="slide1" href="/make/" target="_blank" data-img-id="14" onclick="rate(this)">-->
+            <!--<img src="static/picture/file_5b4714b96c351.png" alt="微信小程序"/>-->
+        <!--</a>-->
+        <!--<a class="banner-image-item " data-index="slide2" href="http://www.jisuapp.cn/activity/1.html" target="_blank" data-img-id="212"-->
+           <!--onclick="rate(this)">-->
+            <!--<img src="static/picture/file_5b332a82bfef4.png" alt=""/>-->
+        <!--</a>-->
+        <!--<a class="banner-image-item " data-index="slide3" href="http://school.jisuapp.cn/courses/29.html"-->
+           <!--target="_blank" data-img-id="188" onclick="rate(this)">-->
+            <!--<img src="static/picture/file_5b0bc1936a680.png" alt=""/>-->
+        <!--</a>-->
+        <!--<a class="banner-image-item " data-index="slide4" href="https://market.cloud.tencent.com/act/zhichi/?fromSource=gwzcw.854607.854607.854607"-->
+           <!--target="_blank" rel="nofollow" data-img-id="91" onclick="rate(this)">-->
+            <!--<img src="static/picture/file_5b3df5f5960c5.jpg" alt="" rel="nofollow"/>-->
+        <!--</a>-->
+        <!--<a class="banner-image-item " data-index="slide5" href="http://www.huodongxing.com/event/9448501818800" target="_blank" data-img-id="220"-->
+           <!--onclick="rate(this)">-->
+            <!--<img src="static/picture/file_5b4481f0ccaaf.png" alt="小程序沙龙"/>-->
+        <!--</a>-->
+    </div>
+    <a class="banner-btn-prev banner-btn"></a>
+    <a class="banner-btn-next banner-btn"></a>
+    <div class="banner-pagination-area" id="banner-pagination-area">
+        <div class="banner-pagination-wrap">
+            <!--<a href="javascript:;" class="banner-pagination-item active"></a>-->
+            <!--<a href="javascript:;" class="banner-pagination-item "></a>-->
+            <!--<a href="javascript:;" class="banner-pagination-item "></a>-->
+            <!--<a href="javascript:;" class="banner-pagination-item "></a>-->
+            <!--<a href="javascript:;" class="banner-pagination-item "></a>-->
+            <!--<a href="javascript:;" class="banner-pagination-item "></a>-->
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#banner-section, #banner-images-area').css('height', $(window).width() / 1900 * 490);
+    $(window).resize(function () {
+        $('#banner-section, #banner-images-area').css('height', $(window).width() / 1900 * 490);
+    });
+</script>
+<script type="text/javascript" src="./static/js/index.js"></script>
+<!-- 轮播结束 -->
+<div>
+    <!-- 微信小程序功能特性 -->
+    <p class="g-title">商云聚将为不同行业提供小程序核心功能</p>
+
+    <p style="text-align: center;font-size: 18px;color: #303445;font-weight: 500;margin-top: -23px;">
+        各种场景核心功能，一键生成小程序，提前布局微信新生态，抢占第一波红利</p>
+
+    <div class="core-function">
+      <span>
+        <a href="./product/commerce.html" target="_blank">
+            <div class="core-function-hover">
+                <img src="static/picture/o2o.png" alt=""/>
+                <img src="static/picture/o2o-hover.png" alt="" class="core-function-img-hover"/>
+
+                <p class="core-function-title-one">O2O电商</p>
+
+                <p class="core-function-title-two">线上运营、线下消费，手机直接管理订单</p>
+            </div>
+        </a>
+        <a href="./product/news.html" target="_blank">
+            <div class="core-function-hover">
+                <img src="static/picture/usenet.png" alt=""/>
+                <img src="static/picture/usenet-hover.png" alt="" class="core-function-img-hover"/>
+
+                <p class="core-function-title-one">新闻资讯</p>
+
+                <p class="core-function-title-two" style="margin-left: 23px">同步热点资讯，在线话题互动</p>
+            </div>
+        </a>
+      </span>
+      <span>
+        <a href="./product/order.html" target="_blank">
+            <div class="core-function-hover">
+                <img src="static/picture/reservation-service.png" alt=""/>
+                <img src="static/picture/reservation-service-hover.png" alt="" class="core-function-img-hover"/>
+
+                <p class="core-function-title-one">预约服务</p>
+
+                <p class="core-function-title-two">合理分配门店资源，弹性管理预约时间</p>
+            </div>
+        </a>
+        <a href="./product/platform.html" target="_blank">
+            <div class="core-function-hover">
+                <img src="static/picture/many-stores-platform.png" alt=""/>
+                <img src="static/picture/many-stores-platform-hover.png" alt="" class="core-function-img-hover"/>
+
+                <p class="core-function-title-one">多店平台</p>
+
+                <p class="core-function-title-two" style="left: 93px;">多门店统一管理运营</p>
+            </div>
+        </a>
+      </span>
+      <span>
+        <a href="./product/reach.html" target="_blank">
+            <div class="core-function-hover">
+                <img src="static/picture/shop-system.png" alt=""/>
+                <img src="static/picture/shop-system-hover.png" alt="" class="core-function-img-hover"/>
+
+                <p class="core-function-title-one">到店系统</p>
+
+                <p class="core-function-title-two" style="left: 26px;">线上提前预约，线下扫描点餐，提高执行效率</p>
+            </div>
+        </a>
+        <a href="./product/wisdom.html" target="_blank">
+            <div class="core-function-hover">
+                <img src="static/picture/wisdom-stores.png" alt=""/>
+                <img src="static/picture/wisdom-stores-hover.png" alt="" class="core-function-img-hover"/>
+
+                <p class="core-function-title-one">智慧门店</p>
+
+                <p class="core-function-title-two" style="left: 40px;">WiFi、当面付、会员卡等打造智慧门店</p>
+            </div>
+        </a>
+      </span>
+      <span>
+        <a href="./product/cate.html" target="_blank">
+            <div class="core-function-hover">
+                <img src="static/picture/take-out-service.png" alt=""/>
+                <img src="static/picture/take-out-service-hover.png" alt="" class="core-function-img-hover"/>
+
+                <p class="core-function-title-one">美食外卖</p>
+
+                <p class="core-function-title-two" style="left: 54px;">轻松管理外卖订单，提升餐厅营收</p>
+            </div>
+        </a>
+        <a href="./product/tool.html" target="_blank">
+            <div class="core-function-hover">
+                <img src="static/picture/marketing-tool.png" alt=""/>
+                <img src="static/picture/marketing-tool-hover.png" alt="" class="core-function-img-hover"/>
+
+                <p class="core-function-title-one">营销工具</p>
+
+                <p class="core-function-title-two" style="left: 33px;">秒杀、拼团、集集乐等多种玩法，助力营销</p>
+            </div>
+        </a>
+          </span>
+    </div>
+</div>
+<!-- 功能特性结束 -->
+</div>
+<div style="padding-bottom: 65px;">
+    <p class="g-title">小程序核心场景</p>
+    <!-- 微信小程序应用场景 -->
+    <div class="app-scene">
+        <span>
+        <img src="static/picture/find-app.svg" alt="" style="width: 28px;height: 34px"/>
+        <p>分享到群</p>
+        <img src="static/picture/accessory-app.svg" alt="" style="width: 38px;height: 34px"/>
+        <p>附近小程序</p>
+        </span>
+        <span>
+        <img src="static/picture/scan-code.svg" alt="" style="width: 32px;height: 39px"/>
+        <p>线下扫码</p>
+        <img src="static/picture/share-wx.svg" alt="" style="width: 29px;height: 34px"/>
+        <p>支付完成页</p>
+        </span>
+        <span>
+        <img src="static/picture/top-search.svg" alt="" style="width: 32px;height: 37px"/>
+        <p>微信搜索</p>
+        <img src="static/picture/mini-apps.svg" alt="" style="width: 33px;height: 34px"/>
+        <p>小程序列表</p>
+        </span>
+        <span>
+        <img src="static/picture/code-drainage.svg" alt="" style="width: 27px;height: 42px"/>
+        <p>聊天顶部</p>
+        <img src="static/picture/wcoa.svg" alt="" style="width: 41px;height: 42px"/>
+        <p>公众号主页</p>
+        </span>
+        <span>
+        <img src="static/picture/recommend-friend.svg" alt="" style="width: 44px;height: 44px"/>
+        <p>推荐给好友</p>
+        <img src="static/picture/article.svg" alt="" style="width: 38px;height: 34px"/>
+        <p>公众号文章</p>
+      </span>
+    </div>
+    <!-- 应用场景结束 -->
+</div>
+<!--<div class="video_content">-->
+    <!--<p class="video-title">视频教程</p>-->
+
+    <!--<div class="tutorial_video">-->
+        <!--<div style="height: 15vmin;position: relative;width: 15vmin;margin: 0 auto;">-->
+            <!--<span class="video_circle"></span>-->
+            <!--<i></i>-->
+            <!--<img src="static/picture/play.svg" type=""/>-->
+
+        <!--</div>-->
+        <!--<p>5分钟快速制作小程序演示</p>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="develop-step">
+    <div class="develop-step-title">开发流程</div>
+    <div class="develop-step-content clearfix">
+        <div class="develop-first-step">注册微信小程序并申请微信支付</div>
+        <div class="develop-second-step">制作小程序</div>
+        <div class="develop-third-step">上传并提交审核</div>
+        <div class="develop-firth-step">审核通过，小程序上线</div>
+    </div>
+</div>
+<!-- 品牌用户 -->
+<div class="preview-section" style="background-size: cover;background-repeat: no-repeat;">
+    <div class="preview-bg-box">
+        <img src="static/picture/11.jpg" class="active" alt=""/>
+        <img src="static/picture/12.jpg" alt=""/>
+        <img src="static/picture/13.jpg" alt=""/>
+        <img src="static/picture/14.jpg" alt=""/>
+        <img src="static/picture/15.jpg" alt=""/>
+        <img src="static/picture/16.jpg" alt=""/>
+        <img src="static/picture/17.jpg" alt=""/>
+        <img src="static/picture/18.jpg" alt=""/>
+        <img src="static/picture/19.jpg" alt=""/>
+        <img src="static/picture/21.jpg" alt=""/>
+        <img src="static/picture/22.jpg" alt=""/>
+        <img src="static/picture/23.jpg" alt=""/>
+        <img src="static/picture/24.jpg" alt=""/>
+        <img src="static/picture/25.jpg" alt=""/>
+        <img src="static/picture/26.jpg" alt=""/>
+        <img src="static/picture/27.jpg" alt=""/>
+        <img src="static/picture/28.jpg" alt=""/>
+        <img src="static/picture/29.jpg" alt=""/>
+    </div>
+    <img src="" alt="">
+
+    <div class="preview-content">
+        <div class="preview-left-content">
+            <p class="preview-title">小程序案例</p>
+
+            <p class="preview-description">不管你处于什么行业，商云聚已为您定制多套解决方案，助你轻松玩转“互联网”营销</p>
+
+            <div class="preview-left-content-main">
+                <div class="preview-nav-list">
+                    <div class="nav-list-area">
+                        <div class="nav-list-wrap">
+                            <ul class="webapp-nav-list">
+                                <!--<li class="active">-->
+                                    <!--<a href="javascript:;">多店</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="javascript:;">餐饮</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="javascript:;">电商</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="javascript:;">旅游</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="javascript:;">汽车</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="javascript:;">新闻</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="javascript:;">美容</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="javascript:;">家居</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="javascript:;">健身</a>-->
+                                <!--</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-detail">
+                    <div class="webapp-preview-detail">
+                        <div class="webapp-list-item active">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/15Sh88HKUD.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="15Sh88HKUD">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_591bb57e023a7.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">逛校园</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/5rdPq5605h.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="5rdPq5605h">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_5912b0def337f.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">麦当劳(南山店）</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/d331ISd6KG.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="d331ISd6KG">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_590aced984607.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">美食Lite</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/i11k482Ds2.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="i11k482Ds2">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_1494554614591517f6db26e.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">商场Lite</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div class="webapp-list-item ">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/mfUNHfD81h.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="mfUNHfD81h">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_148066614858412c24e1214.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">艺术蛋糕小店</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/GXBWxEnsvE.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="GXBWxEnsvE">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_149207274658ef392a0c42f.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">美味餐厅</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/1H9fN1Fe49.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="1H9fN1Fe49">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_149181809758eb5671b7439.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">食客</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/BWqB0tv0t8.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="BWqB0tv0t8">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_1499230987595c730b43425.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">美食</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div class="webapp-list-item ">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/SHq4Dzxth8.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="SHq4Dzxth8">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_5707497a71a30.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">商品售卖（可支付）</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/bSkBMbMVX3.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="bSkBMbMVX3">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_5954a88edef2f.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">手机小商铺</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/f9OUmI51o9.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="f9OUmI51o9">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_59a8c61094bf5.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">书悦图书</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/66Yv7uw6jH.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="66Yv7uw6jH">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_5901af8df038c.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">玉器店</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div class="webapp-list-item ">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/9d9I9zPd9d.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="9d9I9zPd9d">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_58f6c89125879.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">旅游</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/gs0LfYnKmF.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="gs0LfYnKmF">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_1498445766595077c6ab9a4.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">欢乐谷（单一景点）</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/MnHXfyvNfk.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="MnHXfyvNfk">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_148852398058b912cc40e82.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">玩转户外</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/CRBxYD08Rq.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="CRBxYD08Rq">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_5844f0032b734.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">三亚</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div class="webapp-list-item ">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/xiyJr9i86k.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="xiyJr9i86k">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_587752494b2c4.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">预约洗车</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div class="webapp-list-item ">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/wtFFf20oFo.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="wtFFf20oFo">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_58fd9c34015f8.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">新闻资讯</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/LljlzvRzDj.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="LljlzvRzDj">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_58fda1d33e1ce.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">新闻Lite</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/9ftP7f2G9Z.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="9ftP7f2G9Z">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_5900729d71452.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">公益</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div class="webapp-list-item ">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/bMvlMbn2Wr.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="bMvlMbn2Wr">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_595b006830852.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">化妆品小程序</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/ekyzg9xKJj.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="ekyzg9xKJj">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_149077471158db6ab7c9c16.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">美容 造型 塑形</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/61Z17G9Blz.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="61Z17G9Blz">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_148853487058b93d5693915.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">日化店</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/PxUXde4z7S.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="PxUXde4z7S">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_147635308757ff5c3fb6a6a.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">变美APP</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div class="webapp-list-item ">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/Wv51AmeP1q.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="Wv51AmeP1q">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_5982d4dd6632d.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">有家家居</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/n0J2JZjjjs.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="n0J2JZjjjs">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_148836397458b6a1c630db6.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">宜简家居</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/iC3BZ7QJvJ.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="iC3BZ7QJvJ">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_149216486758f0a103799ae.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">家居Lite</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/tUUQSz7s1Q.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="tUUQSz7s1Q">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_148912974358c2510f86e69.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">家居换新</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div class="webapp-list-item ">
+                            <ul class="preview-detail-list">
+                                <a href="http://www.jisuapp.cn/make/app/qigg33GtHn.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="qigg33GtHn">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_14987301285954ce905299d.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">健身lite</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/1a1M8xVHMx.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="1a1M8xVHMx">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_1486636020589c43f4b1e69.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">球场（含预约功能）</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/ePGKYRT4J4.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="ePGKYRT4J4">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/file_58e44d13b19a5.png" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">游泳Lite</p>
+                                    </li>
+                                </a>
+                                <a href="http://www.jisuapp.cn/make/app/zrS5YD5b9s.html" target="_blank">
+                                    <li class="preview-detail-item" data-id="zrS5YD5b9s">
+                                        <div class="preview-detail-item-img">
+                                            <img src="static/picture/t_1486636020589c43f4b1e69.jpg" alt=""/>
+                                        </div>
+                                        <p class="preview-detail-item-name">羽中人</p>
+                                    </li>
+                                </a>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="preview-detail-intro">
+                        <p class="preview-detail-intro-title">解决案例介绍</p>
+
+                        <div class="webapp-list-item-content-list active">
+                            <p class="preview-detail-intro-content active">
+                                可实现单店以及多店模式，支持海量大数据的存储。强大的商品数据管理，承载高访问量的冲击，适合多样化连锁经营的行业。</p>
+
+                            <p class="preview-detail-intro-content">
+                                为餐饮行业提供一站式解决方案，凭借到店、预约、点餐等功能，以及积分系统搭建、可视化后台数据管理等强大的技术支持。拓展店铺营销的新渠道。</p>
+
+                            <p class="preview-detail-intro-content">
+                                致力于打造线上线下联动的移动门店，电商系统自带数据统计跟踪用户消费轨迹，互动营模块适应消费者场景化体验，助力客户建立O2O生态体系。</p>
+
+                            <p class="preview-detail-intro-content">
+                                针对旅游应用场景推出手机、PC共同管理，以及独具特色文章功能系统。为旅游行业客户提供高效的特色推荐功能，多样助力旅游行业客户快速发展。</p>
+
+                            <p class="preview-detail-intro-content">
+                                为汽车行业客户提供高性能的专业数据统计工具分析，便捷收集意向客户。为用户提供便捷测评、车友圈等人性化服务，商家实现线上线下融合升级。</p>
+
+                            <p class="preview-detail-intro-content">
+                                将资源聚合以全新的形式提供资讯服务，以留言功能、互动反馈、美化版面，增强新闻报道可读性，探索用户聚焦点，为媒体深度融合打造新的传播平台。</p>
+
+                            <p class="preview-detail-intro-content">
+                                标准的商城体系，提供双端数据管理功能，可随时登录后台操作。让用户畅通体验全方面优质服务，帮助线下商户直接触达用户。</p>
+
+                            <p class="preview-detail-intro-content">
+                                集行业资讯、分享、浏览关于我们等功能于一体，为用户提供立体式的线上线下无缝衔接的多形式专业服务，低成本助商家打造购物社交化平台。</p>
+
+                            <p class="preview-detail-intro-content">
+                                大数据刻画消费者画像，利用健身轻应用向会员定向推送私教或团操课程。通过智能化的手段抢占健身市场精准营销，全方位解决健身行业问题。</p>
+                        </div>
+                    </div>
+                    <div class="more-preview-case-area">
+                        <div class="webapp-more-preview active">
+                            <p>
+                                <a href="http://www.jisuapp.cn/make/" class="more-preview-case" target="_blank">查看更多</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div style="background-color: #fff;padding-bottom: 80px;">-->
+    <!--<p class="hot-article-title">行业热文</p>-->
+
+    <!--<p class="hot-article-small-title">深度见解，行业前沿</p>-->
+    <!--<ul class="hot-article-list">-->
+        <!--<li class="hot-article-list-item">-->
+            <!--<a href="/news/315.html" target="blank">-->
+                <!--<div class="item-img">-->
+                    <!--<img src="static/picture/file_5b5a930963f9f.png" alt="普通商家如何利用“公众号+微信小程序”实现营销转化？" rel="nofollow"/>-->
+
+                    <!--<div class="item-title">普通商家如何利用“公众号+微信小程序”实现营销转化？</div>-->
+                <!--</div>-->
+                <!--<div class="item-intro">微信公众号的出现，改变了中国媒体；小程序的野心更大，想彻底改变中国的商业。公众号与小程序的珠联璧合，成为了电商商家们的主要打法。</div>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="hot-article-list-item">-->
+            <!--<a href="/news/314.html" target="blank">-->
+                <!--<div class="item-img">-->
+                    <!--<img src="static/picture/file_5b5a92088df42.png" alt="腾讯推出「问题疫苗查询」微信小程序，支持一键查询问题疫苗" rel="nofollow"/>-->
+
+                    <!--<div class="item-title">腾讯推出「问题疫苗查询」微信小程序，支持一键查询问题疫苗</div>-->
+                <!--</div>-->
+                <!--<div class="item-intro">最近疫苗事件刺痛着无数国人的心，各大互联网公司包括不限于百度、阿里、腾讯都在为疫苗事件做了实质工作。</div>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="hot-article-list-item">-->
+            <!--<a href="/news/313.html" target="blank">-->
+                <!--<div class="item-img">-->
+                    <!--<img src="static/picture/file_5b5a8fe44ca9a.png" alt="100万个微信小程序里，你是最闪耀的那一个吗？" rel="nofollow"/>-->
+
+                    <!--<div class="item-title">100万个微信小程序里，你是最闪耀的那一个吗？</div>-->
+                <!--</div>-->
+                <!--<div class="item-intro">以鼓励广大小程序开发者及运营者们，展现小程序背后的巨大商业价值，寻找更多小程序的创新商业模式。</div>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="hot-article-list-item">-->
+            <!--<a href="/news/312.html" target="blank">-->
+                <!--<div class="item-img">-->
+                    <!--<img src="static/picture/file_5b58233e9d7f6.png" alt="支付宝小程序上线1年多，对比微信小程序为什么依旧不温不火" rel="nofollow"/>-->
+
+                    <!--<div class="item-title">支付宝小程序上线1年多，对比微信小程序为什么依旧不温不火</div>-->
+                <!--</div>-->
+                <!--<div class="item-intro">2017年5月3日，支付宝小程序上线，但当时支付宝小程序没有固定的入口，用户需要扫描二维码才能进入小程序进行体验。</div>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="hot-article-list-item">-->
+            <!--<a href="/news/311.html" target="blank">-->
+                <!--<div class="item-img">-->
+                    <!--<img src="static/picture/file_5b58205fb57ea.png" alt="微信小程序功能更新，安卓版的「我的小程序」也来了" rel="nofollow"/>-->
+
+                    <!--<div class="item-title">微信小程序功能更新，安卓版的「我的小程序」也来了</div>-->
+                <!--</div>-->
+                <!--<div class="item-intro">安卓内测版的微信除了有「我的小程序」任务栏功能之外，其「搜一搜」页面也发生一点点变化。</div>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="hot-article-list-item">-->
+            <!--<a href="/news/310.html" target="blank">-->
+                <!--<div class="item-img">-->
+                    <!--<img src="static/picture/file_5b581dae90b93.png" alt="3大营销模块、9大推广方法，电商微信小程序最全营销指南" rel="nofollow"/>-->
+
+                    <!--<div class="item-title">3大营销模块、9大推广方法，电商微信小程序最全营销指南</div>-->
+                <!--</div>-->
+                <!--<div class="item-intro">-->
+                    <!--近年来，以APP为基础的移动电商用户规模保持稳定增长，随着红利期过去，其增长率在逐渐下降，电商需要新的突破口。而小程序的出现恰好给电商开辟出了新的路径，他的“带货”能力也在不断刷新我们的想象-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<a href="/news/" target="_blank" class="hot-article-more">查看更多</a>-->
+<!--</div>-->
+<!--<div class="brand-section">-->
+    <!--<p class="brand-title">品牌用户</p>-->
+    <!--<ul class="brand-list">-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/microsoft.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/soho.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/jianhang.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/xinhuaribao.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/wuliangye.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/tengxun.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/alibaba.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/sony.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/wangyi.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/bmw.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/wanda.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/dadi.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/weipinghui.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/letv.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/voice_china.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/iqiyi.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/zhoudasheng.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/porsche.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/taimujiang.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/huayunzhidi.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/huawei.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/xiaomi.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/zhaohang.png"/>-->
+        <!--</li>-->
+        <!--<li class="brand-item">-->
+            <!--<img src="static/picture/xinri.png"/>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<div class="making-online">
+    <div class="making-online-content">
+        <div class="making-online-title">免费在线制作</div>
+        <div class="making-online-options">
+            <a href="http://www.jisuapp.cn/make/" target="_blank" class="option">免费制作</a>
+            <a href="/index.php?r=pc/index/agency&is_app=1" target="_blank" class="option app-join-index">招募代理</a>
+        </div>
+    </div>
+</div>
+<!-- 引入jisuapp_footer -->
+<link rel="stylesheet" href="static/css/jisuapp_footer.css"/>
+<div class="bt-nav" style="background-color:#141821">
+    <div class="bt-nav-box">
+        <div class="bt-nav-header">
+            <div class="bt-nav-phone">
+                <svg class="icon" width="80px" height="80px" viewBox="0 0 1024 1024" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#dbdbdb"
+                          d="M746.057143 513.462857c-11.702857 0-21.942857-10.24-21.942857-21.942857 0-117.028571-95.085714-212.114286-212.114286-212.114286s-212.114286 95.085714-212.114286 212.114286c0 11.702857-10.24 21.942857-21.942857 21.942857s-21.942857-10.24-21.942857-21.942857c0-140.434286 115.565714-256 256-256S768 351.085714 768 491.52c0 11.702857-10.24 21.942857-21.942857 21.942857z"/>
+                    <path fill="#dbdbdb"
+                          d="M409.6 440.32a36.571429 21.942857 90 1 0 43.885714 0 36.571429 21.942857 90 1 0-43.885714 0Z"/>
+                    <path fill="#dbdbdb"
+                          d="M570.514286 440.32a36.571429 21.942857 90 1 0 43.885714 0 36.571429 21.942857 90 1 0-43.885714 0Z"/>
+                    <path fill="#dbdbdb"
+                          d="M512 548.571429c-58.514286 0-99.474286-21.942857-99.474286-55.588572h43.885715v-2.925714c2.925714 2.925714 20.48 14.628571 55.588571 14.628571s52.662857-10.24 55.588571-14.628571v2.925714h43.885715c0 33.645714-40.96 55.588571-99.474286 55.588572zM702.171429 703.634286c-27.794286 0-51.2-23.405714-51.2-51.2v-102.4c0-27.794286 23.405714-51.2 51.2-51.2h73.142857c27.794286 0 51.2 23.405714 51.2 51.2v102.4c0 27.794286-23.405714 51.2-51.2 51.2h-73.142857z m0-160.914286c-4.388571 0-7.314286 2.925714-7.314286 7.314286v102.4c0 4.388571 2.925714 7.314286 7.314286 7.314285h73.142857c4.388571 0 7.314286-2.925714 7.314285-7.314285v-102.4c0-4.388571-2.925714-7.314286-7.314285-7.314286h-73.142857z"/>
+                    <path fill="#dbdbdb"
+                          d="M428.617143 732.891429c-155.062857 0-197.485714-23.405714-215.04-40.96-16.091429-16.091429-16.091429-32.182857-16.091429-39.497143v-102.4c0-27.794286 23.405714-51.2 51.2-51.2h73.142857c27.794286 0 51.2 23.405714 51.2 51.2v70.217143c0 11.702857-10.24 21.942857-21.942857 21.942857s-21.942857-10.24-21.942857-21.942857v-70.217143c0-4.388571-2.925714-7.314286-7.314286-7.314286h-73.142857c-4.388571 0-7.314286 2.925714-7.314285 7.314286v102.4c0 4.388571 0 5.851429 2.925714 8.777143 8.777143 8.777143 45.348571 29.257143 194.56 27.794285 11.702857 0 21.942857 10.24 21.942857 21.942857s-10.24 21.942857-21.942857 21.942858h-10.24z"/>
+                    <path fill="#dbdbdb"
+                          d="M519.314286 788.48c-38.034286 0-70.217143-30.72-70.217143-70.217143 0-39.497143 30.72-70.217143 70.217143-70.217143s70.217143 30.72 70.217143 70.217143-32.182857 70.217143-70.217143 70.217143z m0-96.548571c-14.628571 0-26.331429 11.702857-26.331429 26.331428s11.702857 26.331429 26.331429 26.331429 26.331429-11.702857 26.331428-26.331429-11.702857-26.331429-26.331428-26.331428z"/>
+                </svg>
+                <h1>咨询热线</h1>
+
+                <p>400-078-9990</p>
+                <ul>
+                    <li><a href="http://www.jisuapp.cn/make/" target="_blank">小程序制作</a></li>
+                    <li><a href="http://www.jisuapp.cn/agents/" target="_blank" class="app-join">小程序加盟</a></li>
+                    <li><a href="http://school.jisuapp.cn/" target="_blank">小程序教程</a></li>
+                    <li><a href="http://shop.jisuapp.cn/" target="_blank">小程序商店</a></li>
+                </ul>
+            </div>
+            <ul class="bt-nav-knows">
+                <li class="bt-nav-knows_1">
+                    <ul>
+                        <h3>资源社区</h3>
+                        <li><a href="http://shop.jisuapp.cn/" target="_blank">即速商店</a></li>
+                        <li><a href="http://zixun.jisuapp.cn/" target="_blank">即速资讯</a></li>
+                        <li><a href="http://school.jisuapp.cn/" target="_blank">即速学院</a></li>
+                        <li><a href="http://ask.jisuapp.cn/" target="_blank">即速问答</a></li>
+                        <li><a href="http://bbs.zhichiwangluo.com/" target="_blank">即速论坛</a></li>
+                    </ul>
+                </li>
+                <li class="bt-nav-knows_2">
+                    <ul>
+                        <h3>用户中心</h3>
+                        <li><a href="http://www.jisuapp.cn/join/technology/" rel="nofollow" target="_blank">加入我们</a>
+                        </li>
+                        <li><a href="http://www.jisuapp.cn/aboutus/" rel="nofollow" target="_blank">关于我们</a></li>
+                        <li><a href="http://www.jisuapp.cn/news/" target="_blank">媒体报道</a></li>
+                        <li><a href="http://www.jisuapp.cn/cases/" target="_blank">合作案例</a></li>
+                    </ul>
+
+                </li>
+                <li class="bt-nav-knows_3">
+                    <ul>
+                        <h3>联系我们</h3>
+                        <li>套餐咨询：</li>
+                        <li class="app-join-phone">招商咨询：（微信同号）</li>
+                        <li>周一至周五 9:00-18:30</li>
+                        <li><span class="bt-nav-cpy-address">公司地址：</span><span
+                                style="display: inline-block">福建省福州市晋安区<br>海峡工业设计产业园A区10楼</span></li>
+                    </ul>
+
+                </li>
+                <li class="bt-nav-knows_4">
+                    <ul>
+                        <h3>关注即速应用</h3>
+                        <li class="active">
+                            <a href="javascript:;">咫尺网络微信</a>
+                            <img src="static/picture/zhichi_code.jpg" alt="二维码"/>
+                        </li>
+                        <li>
+                            <a href="javascript:;">通晓程序微信</a>
+                            <img src="static/picture/tongxiao_code.jpg" alt="二维码"/>
+                        </li>
+                        <li>
+                            <a href="javascript:;">即速应用微信</a>
+                            <img src="static/picture/jisuapp_code.jpg" alt="二维码"/>
+                        </li>
+                        <li>
+                            <a href="javascript:;">微页微信</a>
+                            <img src="static/picture/weiye_code.jpg" alt="二维码"/>
+                        </li>
+                        <li>
+                            <a href="javascript:;">h5秀微信</a>
+                            <img src="static/picture/h5_code.jpg" alt="二维码"/>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+        <div class="bt-nav-body">
+
+            <ul>
+                <li><label class="bt-nav-moreInfo">更多资讯：</label></li>
+                <li><a href="https://www.toutiao.com/c/user/64189029134/#mid=1573795950862350" rel="nofollow"
+                       target="_blank"><img src="static/picture/toutiao.png" alt="头条"/></a></li>
+                <li><a href="http://mp.sohu.com/profile?xpt=dG9uZ3hpYW9jaGVuZ3h1QHNvaHUuY29t" rel="nofollow"
+                       target="_blank"><img src="static/picture/souhu.png" alt="搜狐"/></a></li>
+                <li><a href="https://weibo.com/zhichiwangluo?refer_flag=1001030101_&is_hot=1" rel="nofollow"
+                       target="_blank"><img src="static/picture/weibo.png" alt="微博"/></a></li>
+                <li><a href="https://baijiahao.baidu.com/u?app_id=1583488007721839&fr=bjharticle" rel="nofollow"
+                       target="_blank"><img src="static/picture/baijia.png" alt="百家"/></a></li>
+                <li><a href="http://www.yidianzixun.com/channel/m70345" rel="nofollow" target="_blank"><img
+                        src="static/picture/yidian.png" alt="一点资讯"/></a></li>
+                <li><a href="https://www.zhihu.com/org/ji-su-ying-yong/activities" rel="nofollow" target="_blank"><img
+                        src="static/picture/zhihu.png" alt="知乎"/></a></li>
+            </ul>
+        </div>
+        <div class="bt-nav-footer" data-url="/">
+
+            <div class="bt-nav-fre_link">
+                <h3 class="bt-nav-foot_title">友情链接：</h3>
+                                <span>
+                    <a href="http://www.aseoe.com/" target="_blank">web前端开发</a>
+                </span>
+                                <span>
+                    <a href="http://www.wxeditor.com" target="_blank">微信编辑器</a>
+                </span>
+                                <span>
+                    <a href="http://www.softwhy.com" target="_blank">前端</a>
+                </span>
+                                <span>
+                    <a href="http://www.00791.com/" target="_blank">手游排行榜</a>
+                </span>
+                                <span>
+                    <a href="https://www.xcx.la" target="_blank">小程序商店</a>
+                </span>
+                                <span>
+                    <a href="https://www.w3cschool.cn/" target="_blank">W3Cschool</a>
+                </span>
+                                <span>
+                    <a href="http://alipay.jisuapp.cn/" target="_blank">支付宝小程序</a>
+                </span>
+                                <span>
+                    <a href="http://www.zhichiwangluo.com/" target="_blank">微页</a>
+                </span>
+                                <span>
+                    <a href="http://www.huing.net" target="_blank">会员管理系统</a>
+                </span>
+                                <span>
+                    <a href="http://www.wxapp-union.com" target="_blank">小程序社区</a>
+                </span>
+                                <span>
+                    <a href="http://jailbreak.25pp.com/" target="_blank">苹果越狱</a>
+                </span>
+                                <span>
+                    <a href="https://www.houxue.com" target="_blank">厚学网</a>
+                </span>
+                                <span>
+                    <a href="http://www.linecg.com/" target="_blank">直线网</a>
+                </span>
+                                <span>
+                    <a href="https://www.tuputech.com/" target="_blank">人工智能</a>
+                </span>
+                                <span>
+                    <a href="http://www.apppark.cn/" target="_blank">APP免编程制作</a>
+                </span>
+                                <span>
+                    <a href="http://www.moke8.com/" target="_blank">网站模板</a>
+                </span>
+                                <span>
+                    <a href="https://t.qianzhan.com/" target="_blank">产经资讯</a>
+                </span>
+                                <span>
+                    <a href="http://www.php.cn/" target="_blank">php中文网</a>
+                </span>
+                                <span>
+                    <a href="http://www.abcde.cn/" target="_blank">香港服务器</a>
+                </span>
+                                <span>
+                    <a href="http://www.wwei.cn/" target="_blank">二维码生成器</a>
+                </span>
+                                <span>
+                    <a href="http://www.7po.com/" target="_blank">智能电视论坛</a>
+                </span>
+                                <span>
+                    <a href="http://www.dnpz.net" target="_blank">电脑配置</a>
+                </span>
+                                <span>
+                    <a href="http://www.wubidz.cn/" target="_blank">打字练习</a>
+                </span>
+                                <span>
+                    <a href="http://chromecj.com/" target="_blank">chrome插件</a>
+                </span>
+
+            </div>
+            <p class="copyright">
+                <span>&copy;Copyright @2017 福建锦绣商务电子科技有限公司 All Rights Reserved <a href="http://www.miitbeian.gov.cn" rel="nofollow" target="_blank">闽ICP备14019949号-3</a></span>
+                <img src="static/picture/ebsgovicon_1.png" class="ebsgovicon" alt="工商网监电子标识"/>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    $('.bt-nav-knows_4 a').mouseover(function () {
+        var $li = $(this).closest('li');
+        if ($li.hasClass('active')) {
+            return
+        }
+        ;
+        $li.addClass('active');
+        $li.siblings('li').removeClass('active');
+    })
+    $('.bt-nav-body li').hover(function () {
+        var src = $(this).find('img').attr('src');
+        $(this).find('img').attr('src', src.replace('.png', '_light.png'))
+    }, function () {
+        var src = $(this).find('img').attr('src');
+        $(this).find('img').attr('src', src.replace('_light.png', '.png'))
+    })
+
+    // 开关状态
+    function stateFooter() {
+        if ('tg.jisuapp.cn' != window.location.hostname) {
+            return;
+        }
+        $.ajax({
+            url: '/index.php?r=pc/Index/GetAgentJoinSwitch',
+            data: {},
+            dataType: 'json',
+            type: 'post',
+            success: function (data) {
+                if (data.status != 0) {
+                    alertTip(data.data);
+                    return;
+
+                }
+                data.data && $.each(data.data, function (index, item) {
+                    if (item.id == '3') {
+                        if (item.status == '1') {
+                            $('.app-join').css({'display': 'block'});
+                        } else {
+                            $('.app-join').css({'display': 'none'});
+                        }
+                    }
+                    if (item.id == '4') {
+                        if (item.status == '1') {
+                            $('.app-join-phone').css({'display': 'block'});
+                        } else {
+                            $('.app-join-phone').css({'display': 'none'});
+                        }
+                    }
+                    if (item.id == '5') {
+                        if (item.status == '1') {
+                            $('.bt-nav-knows_4').css({'display': 'block'});
+                        } else {
+                            $('.bt-nav-knows_4').css({'display': 'none'});
+                        }
+                    }
+                })
+            },
+            error: function (data) {
+
+            }
+        })
+    }
+    stateFooter();
+</script>
+<!-- 底部栏 -->
+<!-- 右小角联系图标 -->
+<link rel="stylesheet" href="static/css/new_upper_right_corner.css">
+
+<script id="qd2852151828c1fdcdf5d7fe54a62ca13fd41e940060" src="static/js/0fa0bdec99b540ba901ff9bbe009a9f8.js"
+        charset="utf-8" async defer></script>
+<!--<div class="consult_contact">-->
+    <!--<div class="consult_wrap"><a href="http://www.v5kf.com/public/chat/chat?sid=146776&entry=5&ref=link"-->
+                                 <!--target="_blank">-->
+        <!--<img src="static/picture/ball.png" class="ball" alt=""/>-->
+        <!--<img src="static/picture/bg_0.png" class="staff_img" alt=""/>-->
+        <!--<img src="static/picture/bg_1.png" class="bg-1" alt=""/>-->
+        <!--<img src="static/picture/bg_2.png" class="bg-2" alt=""/>-->
+        <!--<img src="static/picture/bg_3.png" class="bg-3" alt=""/></a>-->
+
+        <!--<div class="block_tip">-->
+            <!--<div class="customer-service">客服</div>-->
+            <!--<div class="customer-service-text">套餐咨询，操作答疑等</div>-->
+            <!--<a href="https://www.v5kf.com/public/chat/chat?sid=146776&entry=5&ref=link" target="_blank">-->
+                <!--<div class="online-service"><img src="static/picture/online-service.svg" alt=""/>在线客服</div>-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div class="banner-video">
+    <div class="banner-video-cell">
+        <a href="javascript:;" class="banner-video-btn-close" title="关闭"></a>
+        <video class="banner-video-player" controls="true" src="http://f.zhichiwangluo.com/webapp.mp4"></video>
+    </div>
+</div>
+<!-- 回到顶部 -->
+<div class="nav_top">
+    <span class="nav_help" style="visibility: hidden;">
+      <a>
+          <span class="use"><svg class="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xlink:href="static/fonts/symbol-btn.svg#icon-help2"/>
+          </svg></span>
+          <span class="help-tip">新手教程</span>
+      </a>
+      </span>
+      <span class="nav_senior" id="senior">
+    	<a href="javascript:;">
+            <span class="use"><svg class="">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xlink:href="static/fonts/symbol-btn.svg#icon-senior"/>
+            </svg></span>
+            <span class="senior-tip">高级试用</span>
+        </a>
+    	</span>
+      <span class="nav_phone">
+      <a href="javascript:;">
+          <span class="use"><svg class="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xlink:href="static/fonts/symbol-btn.svg#icon-phone"/>
+          </svg></span>
+          <span class="phone-num" style="font-size: 14px">400-078-9990</span>
+          <span class="phone-tip">电话咨询</span>
+      </a>
+    </span>
+      <span class="scrollTop" id="back-top">
+      <a href="javascript:;"><span class="use"><svg class="">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="static/fonts/symbol-btn.svg#icon-top2"/>
+      </svg></span>
+          <span class="top-tip">回到顶部</span></a>
+      </span>
+</div>
+<!-- 峰会弹窗 -->
+
+<!--<div class="summit_area">-->
+    <!--<a href="javascript:;" class="summit_enter summit_same"></a>-->
+
+    <!--<div class="summit_delet"></div>-->
+<!--</div>-->
+<!--<div class="small_summit_area">-->
+    <!--<a href="javascript:;" class="small_summit_enter summit_same"></a>-->
+<!--</div>-->
+<script type="text/javascript">
+    document.getElementById('back-top').onclick = function () {
+        $("html,body").animate({scrollTop: 0}, 500);
+    }
+    $('#senior').on('click', function (event) {
+        $('#advanced-container').show()
+    });
+    $('.summit_area').on('click', '.summit_delet', function () {
+        $('.summit_area').hide();
+        $('.small_summit_area').show();
+    })
+    $('.summit_same').on('click', function () {
+        $.ajax({
+            url: "/index.php?r=pc/Index/Signup",
+            type: "post",
+            dataType: "json",
+            data: {type: 'adv'},
+            success: function (data) {
+                if (data.status != 0) {
+                    alertTip(data.data);
+                    return;
+                }
+                window.location.href = "http://www.jisuapp.cn/2018/summit.html";
+            }
+        })
+    })
+    var start = 10;
+    var timer = setInterval(function () {
+        start--;
+//        console.log(start);
+        if (start == 0) {
+            clearInterval(timer);
+            $('.summit_area').hide();
+            $('.small_summit_area').show();
+        }
+
+
+    }, 1000)
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="static/css/enterprise.css"/>
+<div class="advancedContainer" id="advanced-container">
+    <div class="main">
+        <div class="premium-left">
+            <img src="static/picture/premium.jpg" alt="" style="width: 370px"/>
+        </div>
+        <div class="premium-right">
+            <div class="submenu ">
+                <p style="font-size: 24px">小程序高级版&nbsp;<span style="color: #ff3f1d;">￥3999/年</span>
+                    <span style="font-size: 16px;margin-left: 5px;">（有效期20天）</span></p>
+            </div>
+            <div class="msg">
+                <div style="border-bottom: 1px solid #666666">
+                    <lable>姓名：</lable>
+                    <input type="text" id="name"/>
+                </div>
+                <div style="border-bottom: 1px solid #666666">
+                    <lable>电话：</lable>
+                    <input type="text" id="telephone"/>
+                </div>
+                <div style="border-bottom: 1px solid #666666">
+                    <lable>公司名称：</lable>
+                    <input type="text" id="company"/>
+                </div>
+                <div style="border-bottom: 1px solid #666666">
+                    <lable>职称：</lable>
+                    <input type="text" id="technicalTitle"/>
+                </div>
+            </div>
+            <div class="advanced-button">
+                <button style="width: 314px;height: 37px;background-color: #37b7eb;font-size: 16px;margin-top: 30px;
+			color: white;margin-top: 42px;border: none;">立即申请
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="static/js/enterprise.js"></script>
+<link rel="stylesheet" href="static/css/notice_newfunction.css">
+<div class="notice"
+     style="display: none;background-image: url(static/images/newfunbg.png); background-size: 100% auto;background-repeat: no-repeat;border-radius: 2px 2px 0 0;background-color: #fff;background-position: 0 -25px;overflow: hidden;">
+    <p><span style="float: left;"><img
+            style="margin-left: 7px; width: 14px; margin-top: 7px;margin-right: 5px;vertical-align: top;"
+            src="static/picture/noticelogo.png" alt=""/>咫尺网络</span><span class="noticeClose"
+                                                                         style="float: right;height: 25px;    width: 25px;    text-align: center;">×</span>
+    </p>
+    <img style="position: absolute;bottom: 80px;right: -10px;" src="static/picture/noticebg.png" alt=""/>
+    <a class="for-more" target="_blank">
+        <div>
+            <p class="new-notice">公告</p>
+
+            <p style="font-size: 12px;">您的关注是我们的动力</p>
+
+            <div>
+                <ul class="title-plate">
+                    <li>
+                        <p class="the-title">我是标题</p>
+
+                        <p class="function">功能介绍，功能介绍</p>
+                    </li>
+                </ul>
+            </div>
+            <span>查看详情</span>
+        </div>
+    </a>
+</div>
+<div class="newFun">
+    <p><span style="float: left;"><img class="newFun-img" src="static/picture/noticelogo.png" alt=""/></span><span
+            class="noticeClose" style="float: right;height: 25px;    width: 25px;    text-align: center;">×</span></p>
+
+    <div>
+        <p class="function-onlie">新功能上线</p>
+
+        <p class="count"></p>
+
+        <p style="font-size: 13px;">帮助您打造更贴心的小程序</p>
+        <ul class="look-more">
+            <!-- <li><a href="">9月21日 外卖功能上线了</a></li><li><a href="">9月21日 外卖功能上线了</a></li><li><a href="">9月21日 外卖功能上线了</a></li> --></ul>
+        <a href="/index.php?r=pc/IndexNew/MessageNoticeShow" target="_blank">查看更多</a>
+    </div>
+</div>
+<script src="static/js/notice_newfunction.js"></script>
+
+</body>
+</html>
